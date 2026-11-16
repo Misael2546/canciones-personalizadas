@@ -1,0 +1,235 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#101010">
+<title>Canciones Personalizadas | Un regalo único</title>
+<style>
+:root {
+  --gold:#d6b46a;
+  --black:#101010;
+  --white:#fff;
+  --gray:#aaa;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--black);color:white;
+  font-family:Arial,sans-serif;line-height:1.6;
+}
+header{
+  padding:22px 18px;text-align:center;
+  border-bottom:1px solid #493e2a;
+}
+.logo{color:var(--gold);font-size:25px;font-weight:bold;letter-spacing:1px}
+.tagline{font-size:12px;color:#bbb;letter-spacing:3px}
+.hero{
+  padding:65px 22px 45px;text-align:center;
+  background:radial-gradient(ellipse at top,#40321c,#101010 70%);
+}
+.eyebrow{color:var(--gold);letter-spacing:3px;font-size:12px}
+h1{font-family:Georgia,serif;font-size:40px;line-height:1.15;margin:18px 0}
+h1 span{color:var(--gold);font-style:italic}
+.hero p{color:#ccc;max-width:470px;margin:15px auto 25px}
+.btn{
+  display:inline-block;border:0;border-radius:30px;
+  padding:14px 23px;background:var(--gold);
+  color:#17130b;font-weight:bold;text-decoration:none;
+  cursor:pointer;font-size:15px;
+}
+section{padding:42px 20px;max-width:850px;margin:auto}
+h2{font-family:Georgia,serif;text-align:center;font-size:29px}
+.subtitle{text-align:center;color:#aaa;margin-bottom:28px}
+.cards{display:grid;gap:16px}
+.card{
+  border:1px solid #55472f;border-radius:16px;
+  padding:23px;background:#191919;
+}
+.card.featured{border-color:var(--gold)}
+.card h3{color:var(--gold);font-size:20px;margin:0}
+.price{font-size:27px;font-weight:bold;margin:12px 0}
+.card p,.card li{color:#ccc;font-size:14px}
+.card ul{padding-left:20px}
+.card .btn{width:100%;text-align:center;margin-top:12px}
+.chat{
+  border:1px solid #55472f;border-radius:18px;
+  background:#191919;padding:22px;
+}
+.message{
+  background:#29251e;border-radius:14px;
+  padding:14px;margin:12px 0;color:#eee;
+}
+.message.bot{border-left:3px solid var(--gold)}
+.message.user{background:#46391f;text-align:right}
+.field{width:100%;padding:14px;margin:8px 0;
+  background:#101010;border:1px solid #65563b;
+  border-radius:10px;color:white;font-size:16px}
+textarea.field{min-height:100px;resize:vertical}
+.options{display:grid;gap:9px;margin:15px 0}
+.option{
+  background:#242424;color:white;border:1px solid #665638;
+  padding:13px;border-radius:10px;text-align:left;
+  cursor:pointer;font-size:15px;
+}
+.option:hover{border-color:var(--gold)}
+#conversation{min-height:90px}
+footer{
+  text-align:center;padding:35px 20px;
+  border-top:1px solid #493e2a;color:#aaa;font-size:13px
+}
+.gold{color:var(--gold)}
+.small{font-size:12px;color:#999}
+@media(min-width:650px){
+  .cards{grid-template-columns:repeat(3,1fr)}
+  h1{font-size:54px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">♫ CANCIONES PERSONALIZADAS</div>
+  <div class="tagline">TU HISTORIA HECHA CANCIÓN</div>
+</header>
+
+<div class="hero">
+  <div class="eyebrow">REGALÁ EMOCIONES</div>
+  <h1>Hay historias que<br>merecen convertirse<br>en <span>canciones.</span></h1>
+  <p>Creamos canciones únicas con inteligencia artificial, inspiradas en tus recuerdos, tus sentimientos y las personas que más querés.</p>
+  <a href="#asistente" class="btn">CREAR MI CANCIÓN ♫</a>
+</div>
+
+<section id="servicios">
+  <h2>Nuestras experiencias</h2>
+  <p class="subtitle">Elegí cómo querés sorprender.</p>
+  <div class="cards">
+
+    <div class="card featured">
+      <h3>♫ Canción especial</h3>
+      <div class="price">$10.000</div>
+      <p>Una canción personalizada a partir de tu historia.</p>
+      <ul>
+        <li>Letra original</li>
+        <li>Música personalizada</li>
+        <li>Portada de la canción</li>
+        <li>Archivo listo para compartir</li>
+      </ul>
+      <a href="#asistente" class="btn" onclick="choose('basica')">ELEGIR</a>
+    </div>
+
+    <div class="card">
+      <h3>♡ Canción premium</h3>
+      <div class="price">A consultar</div>
+      <p>Una experiencia más profunda y exclusiva.</p>
+      <ul>
+        <li>Mayor personalización</li>
+        <li>Detalles y recuerdos especiales</li>
+        <li>Elección de estilo musical</li>
+        <li>Atención personalizada</li>
+      </ul>
+      <a href="#asistente" class="btn" onclick="choose('premium')">CONSULTAR</a>
+    </div>
+
+    <div class="card">
+      <h3>▶ Canción + video</h3>
+      <div class="price">A consultar</div>
+      <p>Convertí tus recuerdos en una experiencia audiovisual.</p>
+      <ul>
+        <li>Canción personalizada</li>
+        <li>Video con fotografías</li>
+        <li>Diseño emotivo</li>
+        <li>Atención por WhatsApp</li>
+      </ul>
+      <a href="#asistente" class="btn" onclick="choose('video')">CONSULTAR</a>
+    </div>
+
+  </div>
+</section>
+
+<section id="asistente">
+  <h2>Asistente de Canciones Personalizadas</h2>
+  <p class="subtitle">Contanos tu historia. Nosotros te ayudamos a convertirla en música.</p>
+
+  <div class="chat">
+    <div id="conversation">
+      <div class="message bot">
+        ¡Hola! ♡ Soy el Asistente de Canciones Personalizadas.
+        Estoy acá para ayudarte a crear un regalo inolvidable.
+        <br><br>¿Para quién querés hacer la canción?
+      </div>
+    </div>
+    <input class="field" id="name" placeholder="Nombre de la persona">
+    <input class="field" id="occasion" placeholder="Cumpleaños, aniversario, sorpresa...">
+    <textarea class="field" id="story" placeholder="Contame su historia, recuerdos, momentos especiales y qué te gustaría decirle..."></textarea>
+    <input class="field" id="style" placeholder="Estilo musical preferido (pop, bachata, cumbia...)">
+    <input class="field" id="dedication" placeholder="Tu nombre o dedicatoria">
+    <div class="options">
+      <button class="option" onclick="choose('basica')">♫ Canción especial - $10.000</button>
+      <button class="option" onclick="choose('premium')">♡ Canción premium - consultar</button>
+      <button class="option" onclick="choose('video')">▶ Canción + video con fotos - consultar</button>
+    </div>
+    <button class="btn" style="width:100%" onclick="sendOrder()">ENVIAR MI HISTORIA</button>
+    <p class="small">Tus respuestas se enviarán por WhatsApp para coordinar tu pedido. No compartas información sensible.</p>
+  </div>
+</section>
+
+<section style="text-align:center">
+  <h2>Un regalo que no se olvida.</h2>
+  <p class="subtitle">Cada persona tiene una historia. Hagamos que suene para siempre.</p>
+  <a class="btn" href="https://wa.me/5491137658829?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20una%20canci%C3%B3n%20personalizada.">HABLAR POR WHATSAPP</a>
+</section>
+
+<footer>
+  <div class="logo">CANCIONES PERSONALIZADAS</div>
+  <p>Tu historia, nuestra inspiración.</p>
+  <p>© 2026 Canciones Personalizadas</p>
+</footer>
+
+<script>
+let selected = "basica";
+
+function choose(type){
+  selected = type;
+  const names = {
+    basica:"Canción especial - $10.000",
+    premium:"Canción premium - consultar precio",
+    video:"Canción + video con fotografías - consultar precio"
+  };
+  document.getElementById("conversation").innerHTML =
+    '<div class="message user">'+names[type]+'</div>'+
+    '<div class="message bot">¡Excelente elección! ♡ Completá tus datos y contanos la historia para preparar tu propuesta.</div>';
+}
+
+function sendOrder(){
+  const name=document.getElementById("name").value.trim();
+  const occasion=document.getElementById("occasion").value.trim();
+  const story=document.getElementById("story").value.trim();
+  const style=document.getElementById("style").value.trim();
+  const dedication=document.getElementById("dedication").value.trim();
+
+  if(!name || !story){
+    alert("Por favor, completá el nombre y contanos la historia.");
+    return;
+  }
+
+  const products={
+    basica:"Canción especial - $10.000",
+    premium:"Canción premium - consultar",
+    video:"Canción + video con fotografías - consultar"
+  };
+
+  const text =
+    "Hola, quiero crear una canción personalizada.%0A%0A"+
+    "Producto: "+encodeURIComponent(products[selected])+"%0A"+
+    "Persona: "+encodeURIComponent(name)+"%0A"+
+    "Ocasión: "+encodeURIComponent(occasion)+"%0A"+
+    "Historia: "+encodeURIComponent(story)+"%0A"+
+    "Estilo musical: "+encodeURIComponent(style)+"%0A"+
+    "Dedicatoria: "+encodeURIComponent(dedication);
+
+  window.open("https://wa.me/5491137658829?text="+text,"_blank");
+}
+</script>
+</body>
+</html>
