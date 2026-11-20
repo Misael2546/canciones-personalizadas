@@ -1,33 +1,9 @@
-# Textos para llevar a los clientes al formulario
+# Textos para redes
 
-Reemplazá `PEGAR_TU_ENLACE_DE_GITHUB_PAGES` por la dirección real que te entregue GitHub Pages.
+**Llamado a la acción:**
+¿Querés regalar algo que no se olvide? Convertimos tu historia en una canción personalizada. Elegí la ocasión, contanos los recuerdos y enviá tu pedido por WhatsApp.
 
-## Instagram y TikTok — biografía
+**Enlace de la página:**
+https://misael2546.github.io/canciones-personalizadas/
 
-🎵 Tu historia merece su propia canción ❤️
-Creá tu canción personalizada acá 👇
-PEGAR_TU_ENLACE_DE_GITHUB_PAGES
-
-## Texto para publicaciones y reels
-
-💝 ¿Querés emocionar a alguien con una canción creada especialmente para su historia?
-
-🎶 Contanos quién es, qué vivieron y qué querés transmitir. Nosotros te ayudamos a convertirlo en una canción única.
-
-👉 Entrá al enlace de nuestra BIO y completá el formulario.
-📲 Al terminar, tu pedido se prepara para enviarlo directamente por WhatsApp.
-
-## YouTube — descripción y comentario fijado
-
-🎵 CREÁ TU CANCIÓN PERSONALIZADA
-¿Querés regalar una canción hecha con su nombre, su historia y tus palabras?
-Completá el formulario acá:
-PEGAR_TU_ENLACE_DE_GITHUB_PAGES
-
-Al finalizar, se abrirá WhatsApp con los detalles de tu pedido para que puedas enviárnoslo.
-
-## Facebook
-
-💖 Tu historia puede convertirse en una canción.
-Elegí el tipo de canción, contanos los detalles y enviá tu pedido por WhatsApp desde este enlace:
-PEGAR_TU_ENLACE_DE_GITHUB_PAGES
+**Sugerencia:** colocá el enlace en la biografía y en historias/enlaces disponibles. En plataformas donde la descripción no admite enlaces clicables, indicá “Link en bio”.

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#fff8f6">
+  <meta name="theme-color" content="#242122">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
@@ -15,30 +15,31 @@
   <style>
 :root{
   color-scheme:light;
-  --bg:#fff8f6;
-  --panel:#fffdfc;
-  --panel2:#fff1f3;
-  --rose:#d9799b;
-  --rose-deep:#a94f75;
-  --lavender:#b8a4df;
-  --lavender-deep:#705c99;
-  --peach:#f6c3a8;
-  --cream:#fff5e9;
-  --plum:#50364f;
-  --text:#382d3b;
-  --muted:#817581;
-  --line:#f0dfe5;
+  --bg:#d8c4d1;
+  --panel:#eadce6;
+  --panel2:#ded0e7;
+  --rose:#c66f91;
+  --rose-deep:#914966;
+  --lavender:#a18abd;
+  --lavender-deep:#69527f;
+  --peach:#d9a58f;
+  --cream:#f0e2d5;
+  --plum:#493349;
+  --text:#3d3040;
+  --muted:#766779;
+  --line:#cbb5c8;
   --green:#25d366;
-  --danger:#b4435b;
+  --danger:#a63f58;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
   margin:0;
   background:
-    radial-gradient(ellipse at 8% 5%,#fbe0e9 0,transparent 31%),
-    radial-gradient(ellipse at 95% 22%,#e9e0fa 0,transparent 30%),
-    linear-gradient(180deg,#fff9f6 0%,#fff6f8 48%,#f8f3fc 100%);
+    radial-gradient(ellipse at 8% 4%,#e8c5d2 0,transparent 32%),
+    radial-gradient(ellipse at 94% 22%,#c9bddf 0,transparent 34%),
+    radial-gradient(ellipse at 50% 95%,#e6c8b9 0,transparent 35%),
+    linear-gradient(155deg,#d7c0ce 0%,#cfc4da 52%,#ddc5c2 100%);
   color:var(--text);
   font-family:"DM Sans",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
   font-optical-sizing:auto;
@@ -48,99 +49,273 @@ button,input,textarea,select{font:inherit}
 button{cursor:pointer}
 .shell{
   width:min(100%,560px);min-height:100vh;margin:auto;
-  background:linear-gradient(180deg,rgba(255,255,255,.74),rgba(255,250,250,.91));
-  display:flex;flex-direction:column;box-shadow:0 0 55px #76546d12;
-  overflow:hidden;position:relative;
+  background:linear-gradient(180deg,rgba(235,220,231,.97),rgba(224,211,232,.98) 58%,rgba(235,216,211,.98));
+  display:flex;flex-direction:column;box-shadow:0 0 55px #49334930;
+  overflow:hidden;position:relative
 }
 header{
   padding:19px 20px 15px;text-align:center;
-  border-bottom:1px solid #eddde5;
-  background:rgba(255,251,250,.88);position:sticky;top:0;z-index:5;
+  border-bottom:1px solid #785a75;
+  background:linear-gradient(120deg,rgba(67,45,67,.98),rgba(83,57,83,.97));
+  position:sticky;top:0;z-index:5;
   backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)
 }
 .music-mark{
-  width:45px;height:45px;border:1px solid #e8b4c8;border-radius:50%;
-  display:grid;place-items:center;margin:0 auto 8px;color:var(--rose-deep);
-  font:26px Georgia,serif;background:linear-gradient(145deg,#fff,#f9e8ef);
-  box-shadow:0 5px 18px #d9799b20
+  width:45px;height:45px;border:1px solid #e6b8c9;border-radius:50%;
+  display:grid;place-items:center;margin:0 auto 8px;color:#f5d5df;
+  font:26px Georgia,serif;background:linear-gradient(145deg,#74516e,#523a58);
+  box-shadow:0 5px 18px #21152655
 }
-.brand{font:600 22px/1.12 "Playfair Display",Georgia,serif;letter-spacing:.55px;color:var(--plum)}
-.brand span{color:var(--rose-deep)}
-.tagline{font-size:10px;font-weight:600;letter-spacing:1.65px;text-transform:uppercase;color:#8b7888;margin-top:7px}
+.brand{font:600 22px/1.12 "Playfair Display",Georgia,serif;letter-spacing:.55px;color:#fff1f4}
+.brand span{color:#edb2c7}
+.tagline{font-size:10px;font-weight:600;letter-spacing:1.65px;text-transform:uppercase;color:#dfcbd9;margin-top:7px}
 main{padding:20px 17px 30px;flex:1}
 .hero{text-align:center;padding:24px 8px 22px}
 .eyebrow,.step{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--rose-deep);font-weight:800}
 h1{font:600 clamp(37px,8.4vw,47px)/1.08 "Playfair Display",Georgia,serif;letter-spacing:-.7px;margin:13px 0 12px;color:var(--plum)}
 h1 em{color:var(--lavender-deep);font-weight:normal}
-.lead{font-size:15px;line-height:1.75;font-weight:400;color:#756977;max-width:390px;margin:0 auto}
+.lead{font-size:15px;line-height:1.75;font-weight:400;color:#66566b;max-width:390px;margin:0 auto}
 .promise{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:18px}
 .promise span{
-  border:1px solid #efd4df;border-radius:30px;padding:8px 12px;
-  color:#85536d;font-size:11px;background:linear-gradient(135deg,#fff,#fff1f5);
-  box-shadow:0 3px 12px #bd78951a
+  border:1px solid #c99eb5;border-radius:30px;padding:8px 12px;
+  color:#78435f;font-size:11px;background:linear-gradient(135deg,#f0dce5,#e8d7e9);
+  box-shadow:0 3px 12px #75516e20
 }
-.promise span:nth-child(2){background:linear-gradient(135deg,#fff,#f1ebfb);border-color:#e2d8f3;color:#6e5a91}
-.promise span:nth-child(3){background:linear-gradient(135deg,#fff,#fff1e8);border-color:#f3dfd1;color:#98664f}
+.promise span:nth-child(2){background:linear-gradient(135deg,#e9dff0,#d9d0e9);border-color:#bba9d1;color:#5f4c78}
+.promise span:nth-child(3){background:linear-gradient(135deg,#f1e1d5,#ead2c7);border-color:#d8b5a4;color:#835947}
 .panel{
-  background:linear-gradient(145deg,rgba(255,255,255,.98),rgba(255,249,250,.96));
-  border:1px solid #f0dfe7;border-radius:22px;padding:19px;margin-top:14px;
-  box-shadow:0 12px 34px #805b7510
+  background:linear-gradient(145deg,rgba(239,225,235,.98),rgba(224,211,231,.98));
+  border:1px solid #cbb4c8;border-radius:22px;padding:19px;margin-top:14px;
+  box-shadow:0 12px 34px #63475f20
 }
 .panel h2{font:600 27px/1.2 "Playfair Display",Georgia,serif;letter-spacing:-.25px;margin:9px 0 8px;color:var(--plum)}
 .hint{font-size:13px;line-height:1.58;color:var(--muted);margin:0 0 17px}
 .products{display:grid;gap:10px}
 .product{
   width:100%;text-align:left;color:var(--text);
-  background:linear-gradient(135deg,#fff 0%,#fff9fb 100%);
-  border:1px solid #efdee6;border-radius:16px;padding:15px;
+  background:linear-gradient(135deg,#f0e4eb 0%,#e8deeb 100%);
+  border:1px solid #cdb9ca;border-radius:16px;padding:15px;
   transition:transform .18s,border-color .18s,box-shadow .18s,background .18s;
-  box-shadow:0 4px 13px #78556c0a
+  box-shadow:0 4px 13px #63475f13
 }
 .product:hover,.product.selected{
-  border-color:#d98eac;
-  background:linear-gradient(135deg,#fff2f6 0%,#f6f0ff 100%);
-  transform:translateY(-1px);box-shadow:0 8px 20px #c77b9b1c
+  border-color:#bb7899;
+  background:linear-gradient(135deg,#f1d8e3 0%,#ded5ed 100%);
+  transform:translateY(-1px);box-shadow:0 8px 20px #80516e28
 }
 .product strong{display:block;font-size:15px;font-weight:800;letter-spacing:-.15px;margin-bottom:5px;color:var(--plum)}
-.product small{display:block;color:#786d79;line-height:1.58;font-size:13px}
+.product small{display:block;color:#6e6071;line-height:1.58;font-size:13px}
 .product .price{display:block;color:var(--rose-deep);font-size:12px;font-weight:700;margin-top:8px}
-.progress{height:6px;background:#f0e7f1;border-radius:20px;overflow:hidden;margin:0 0 17px}
-.bar{height:100%;width:0;background:linear-gradient(90deg,var(--rose),var(--lavender));transition:width .25s;border-radius:20px}
+.progress{height:6px;background:#cfc1d4;border-radius:20px;overflow:hidden;margin:0 0 17px}
+.bar{height:100%;width:0;background:linear-gradient(90deg,var(--rose),var(--lavender-deep));transition:width .25s;border-radius:20px}
 .question{font:600 26px/1.2 "Playfair Display",Georgia,serif;letter-spacing:-.2px;margin:9px 0 8px;color:var(--plum)}
 .field{
-  display:block;width:100%;border:1px solid #eadbe4;border-radius:13px;
-  background:#fff;color:#443746;padding:14px 13px;outline:none;min-height:49px;
-  box-shadow:inset 0 1px 2px #78556c08
+  display:block;width:100%;border:1px solid #cbb7c9;border-radius:13px;
+  background:#f0e5ed;color:#443746;padding:14px 13px;outline:none;min-height:49px;
+  box-shadow:inset 0 1px 2px #63475f10
 }
-.field:focus{border-color:#cf8cab;box-shadow:0 0 0 3px #d9799b20}
+.field:focus{border-color:#b87598;box-shadow:0 0 0 3px #c66f912b}
 textarea.field{min-height:125px;resize:vertical}
-.field::placeholder{color:#a69aa6}
+.field::placeholder{color:#928395}
 .choices{display:grid;grid-template-columns:1fr 1fr;gap:9px}
 .choice{
-  background:#fff;color:#5c4c5e;border:1px solid #ebdfe9;border-radius:12px;
+  background:#eee2eb;color:#5c4c5e;border:1px solid #cdbbce;border-radius:12px;
   padding:12px 10px;text-align:left;font-size:13px;min-height:48px;
-  box-shadow:0 3px 10px #78556c08
+  box-shadow:0 3px 10px #63475f10
 }
-.choice.selected{border-color:#d58eac;background:#fff0f5;color:#934d70}
+.choice.selected{border-color:#b87598;background:linear-gradient(135deg,#f0d7e2,#e1d7ed);color:#824763}
 .actions{display:flex;gap:9px;margin-top:18px}
 .btn{border:0;border-radius:30px;padding:14px 17px;font-weight:800;font-size:14px;letter-spacing:.1px;min-height:48px;transition:transform .15s,filter .15s}
 .btn:active{transform:scale(.985)}
-.primary{background:linear-gradient(110deg,#d9799b 0%,#b99fdf 100%);color:#fff;flex:1;box-shadow:0 7px 17px #b77aa12e}
-.secondary{background:#fff;border:1px solid #e7d6e3;color:#725d76}
+.primary{background:linear-gradient(110deg,#bd6489 0%,#8871a8 100%);color:#fff;flex:1;box-shadow:0 7px 17px #79547f40}
+.secondary{background:#e9dce7;border:1px solid #c8b2c6;color:#634d67}
 .whatsapp{background:var(--green);color:#063018;display:flex;align-items:center;justify-content:center;gap:9px;width:100%;font-size:15px;box-shadow:0 7px 17px #25d36625}
-.note{text-align:center;color:#958996;font-size:11px;line-height:1.55;margin:14px 4px 0}
+.note{text-align:center;color:#827386;font-size:11px;line-height:1.55;margin:14px 4px 0}
 .summary{display:grid;gap:12px;margin:15px 0;color:#5f5261;font-size:13px;line-height:1.5}
-.summary-item{border-bottom:1px solid #f0e4eb;padding-bottom:10px;overflow-wrap:anywhere}
+.summary-item{border-bottom:1px solid #cdbdce;padding-bottom:10px;overflow-wrap:anywhere}
 .summary-item b{display:block;color:var(--rose-deep);font-size:11px;text-transform:uppercase;letter-spacing:.6px;margin-bottom:3px}
-.checkline{display:flex;gap:9px;align-items:flex-start;color:#776a78;font-size:12px;line-height:1.45;margin-top:14px}
+.checkline{display:flex;gap:9px;align-items:flex-start;color:#6f6172;font-size:12px;line-height:1.45;margin-top:14px}
 .checkline input{accent-color:var(--rose-deep);margin-top:2px}
 .error{color:var(--danger);font-size:12px;margin-top:9px;min-height:18px}
-footer{text-align:center;border-top:1px solid #f0e1e8;padding:17px;color:#9a8d99;font-size:10px;letter-spacing:.6px;background:#fffafa}
+footer{text-align:center;border-top:1px solid #785a75;padding:17px;color:#e5d2df;font-size:10px;letter-spacing:.6px;background:linear-gradient(120deg,#493349,#60435f)}
 .hidden{display:none!important}
-button:focus-visible{outline:3px solid #b99fdf;outline-offset:3px}
+button:focus-visible{outline:3px solid #8d75aa;outline-offset:3px}
 @media(max-width:390px){main{padding:15px 13px 25px}.panel{padding:15px}.choices{grid-template-columns:1fr}.brand{font-size:20px}.lead{font-size:14px}}
 
-  </style>
+
+/* Identidad premium: espresso, grafito, champagne y rosa antiguo */
+:root{
+  color-scheme:dark;
+  --bg:#211f20;
+  --panel:#302b2b;
+  --panel2:#3a3333;
+  --rose:#b98b91;
+  --rose-deep:#d2a9a4;
+  --lavender:#b7a9a0;
+  --lavender-deep:#d8c7b4;
+  --peach:#d6b99c;
+  --cream:#eadcc8;
+  --plum:#f4eadf;
+  --text:#f4eee7;
+  --muted:#c8bbb0;
+  --line:#62534d;
+  --gold-light:#dfc69c;
+}
+body{
+  color:var(--text);
+  background:
+    radial-gradient(ellipse at 12% 0%,rgba(119,83,79,.30),transparent 34%),
+    radial-gradient(ellipse at 92% 18%,rgba(112,96,79,.22),transparent 30%),
+    linear-gradient(180deg,#242122 0%,#201e1f 58%,#1b1a1b 100%);
+}
+.shell{
+  background:linear-gradient(180deg,rgba(49,43,43,.99),rgba(38,35,35,.99) 58%,rgba(34,31,32,.99));
+  box-shadow:0 0 60px #100e0e99;
+}
+header{
+  border-bottom:1px solid #68564a;
+  background:linear-gradient(115deg,rgba(43,38,38,.98),rgba(62,49,47,.98));
+}
+.music-mark{
+  border-color:#c9ad83;color:#e6cfaa;
+  background:linear-gradient(145deg,#55423d,#342d2c);
+  box-shadow:0 5px 18px #100d0c77;
+}
+.brand{color:#f6eee4}
+.brand span{color:#dfc49a}
+.tagline{color:#c9b9aa}
+.eyebrow,.step{color:#d8b98c}
+h1{color:#f7efe7}
+h1 em{color:#d7b8a8}
+.lead{color:#d2c6bd}
+.promise span{
+  border-color:#786354;color:#ead8bf;
+  background:linear-gradient(135deg,#4a3e3a,#393332);
+  box-shadow:0 3px 12px #100d0c55;
+}
+.promise span:nth-child(2){
+  background:linear-gradient(135deg,#423d3a,#363233);
+  border-color:#77675c;color:#ded0c1;
+}
+.promise span:nth-child(3){
+  background:linear-gradient(135deg,#4a3d38,#3b302e);
+  border-color:#8a6b59;color:#e7c4a8;
+}
+.panel{
+  background:linear-gradient(145deg,rgba(57,50,49,.99),rgba(45,41,41,.99));
+  border-color:#66564f;
+  box-shadow:0 12px 34px #100d0d66;
+}
+.panel h2,.question{color:#f5ece3}
+.hint{color:#cbbeb4}
+.product{
+  color:var(--text);
+  background:linear-gradient(135deg,#49403d 0%,#3b3535 100%);
+  border-color:#6c5b53;
+  box-shadow:0 4px 13px #100d0d55;
+}
+.product:hover,.product.selected{
+  border-color:#c7a77d;
+  background:linear-gradient(135deg,#594740 0%,#49403d 100%);
+  box-shadow:0 8px 20px #100d0d77;
+}
+.product strong{color:#f7eee5}
+.product small{color:#d0c3b9}
+.product .price{color:#e0bd91}
+.progress{background:#514746}
+.bar{background:linear-gradient(90deg,#c89d7a,#dfc69c)}
+.field{
+  border-color:#76645b;
+  background:#3d3736;
+  color:#f6eee6;
+  box-shadow:inset 0 1px 2px #100d0d55;
+}
+.field:focus{
+  border-color:#d0ae82;
+  box-shadow:0 0 0 3px #d0ae8233;
+}
+.field::placeholder{color:#b7a89d}
+.field option{background:#393333;color:#f6eee6}
+.choice{
+  background:#403938;color:#e8ddd3;
+  border-color:#6b5a53;
+  box-shadow:0 3px 10px #100d0d44;
+}
+.choice.selected{
+  border-color:#c9a77e;
+  background:linear-gradient(135deg,#5a463e,#49403b);
+  color:#f7ead9;
+}
+.primary{
+  background:linear-gradient(110deg,#ad7777 0%,#b59672 100%);
+  color:#fffaf4;
+  box-shadow:0 7px 17px #100d0d66;
+}
+.secondary{
+  background:#49403e;
+  border:1px solid #79665b;
+  color:#f0e4d8;
+}
+.whatsapp{color:#082d18}
+.note{color:#bfb1a7}
+.summary{color:#e0d5ca}
+.summary-item{border-bottom-color:#62534d}
+.summary-item b{color:#dfbd94}
+.checkline{color:#d0c3b8}
+.checkline input{accent-color:#c59b76}
+.error{color:#ffb5ad}
+footer{
+  border-top-color:#66534a;
+  color:#cdbba9;
+  background:linear-gradient(115deg,#302929,#3b302d);
+}
+button:focus-visible{outline:3px solid #d4b48b;outline-offset:3px}
+@media(prefers-reduced-motion:no-preference){
+  .product,.btn,.choice{transition-duration:.2s}
+}
+
+
+/* Nuevas secciones: experiencia de compra completa */
+.premium-section{margin:18px 0;padding:21px 17px;border:1px solid #66564f;border-radius:22px;background:linear-gradient(145deg,rgba(57,50,49,.98),rgba(42,38,38,.98));box-shadow:0 12px 34px #100d0d55}
+.section-kicker{font-size:10px;letter-spacing:2px;font-weight:800;color:#d8b98c;text-transform:uppercase}
+.section-title{font:600 27px/1.17 "Playfair Display",Georgia,serif;color:#f7efe7;margin:9px 0}
+.section-copy{font-size:13px;line-height:1.65;color:#cbbeb4;margin:0 0 16px}
+.occasion-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.occasion-card{min-height:128px;text-align:left;padding:13px;border-radius:15px;border:1px solid #6c5b53;color:#f4eee7;background:linear-gradient(145deg,#49403d,#353131);display:flex;flex-direction:column;gap:5px;box-shadow:0 5px 14px #100d0d44;transition:transform .2s,border-color .2s,background .2s}
+.occasion-card:hover,.occasion-card:focus-visible{transform:translateY(-2px);border-color:#c7a77d;background:linear-gradient(145deg,#5a463e,#423a38)}
+.occasion-card span{font-size:23px}.occasion-card b{font:600 15px "Playfair Display",Georgia,serif;color:#f5e9dc}.occasion-card small{font-size:11px;line-height:1.4;color:#cbbeb4}
+.section-footnote{font-size:11px;line-height:1.5;color:#bfb1a7;margin:14px 2px 0}
+.sample-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:15px 0}
+.sample-card{min-width:0;border:1px solid #65544d;border-radius:14px;padding:8px;background:#393333;display:flex;flex-direction:column;gap:5px}
+.sample-card b{font-size:11px;line-height:1.3;color:#f4e9df}.sample-card small{font-size:10px;line-height:1.35;color:#c7b9ae}
+.sample-art{height:92px;border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;font:30px "Playfair Display",Georgia,serif;color:#f1d9b8;gap:4px}
+.sample-art span{font:700 9px "DM Sans",sans-serif;letter-spacing:1.5px}
+.art-love{background:radial-gradient(circle at 50% 40%,#8d5d57,#382d31 72%)}
+.art-family{background:radial-gradient(circle at 50% 40%,#7e6b60,#35302f 72%)}
+.art-party{background:radial-gradient(circle at 50% 40%,#8b7351,#332d2b 72%)}
+.channel-link{display:flex;justify-content:center;align-items:center;text-decoration:none;width:100%;margin-top:9px}
+.package-label{display:inline-block;margin-bottom:8px;color:#d8b98c;font-size:9px;font-weight:800;letter-spacing:1.5px}
+.featured-label{color:#f0c6a4}
+.occasion-choices{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.occasion-choice{min-height:54px;text-align:left;padding:11px 10px;border:1px solid #6b5a53;border-radius:12px;background:#403938;color:#eee2d6;font-size:12px}
+.occasion-choice.selected{border-color:#d0ae82;background:linear-gradient(135deg,#5a463e,#49403b);color:#fff2df;box-shadow:0 0 0 2px #d0ae8220}
+.testimonial-placeholder{border:1px dashed #806b5c;border-radius:16px;padding:20px 16px;text-align:center;background:linear-gradient(145deg,#423937,#343031);display:flex;flex-direction:column;align-items:center;gap:7px}
+.testimonial-placeholder span{font-size:28px;color:#d8b98c}.testimonial-placeholder b{font:600 17px "Playfair Display",Georgia,serif;color:#f5e9dd}.testimonial-placeholder small{font-size:11px;line-height:1.55;color:#cbbeb4;max-width:310px}
+.share-actions{display:grid;grid-template-columns:1fr 1fr;gap:9px}.share-actions .btn{font-size:12px;padding:12px 10px}
+.social-links{display:flex;justify-content:center;gap:18px;margin-top:16px}.social-links a{font-size:12px;color:#dfc69c;text-decoration:none;border-bottom:1px solid #806c5a;padding-bottom:3px}
+.share-status{min-height:16px;text-align:center;font-size:11px;color:#d8b98c}
+.sticky-create{display:none}
+.local-admin{margin:18px 0 8px;border:1px solid #66564f;border-radius:14px;padding:13px;background:#302b2b;color:#eee4db}
+.local-admin summary{cursor:pointer;font-size:12px;font-weight:700;color:#dfc69c}
+.local-admin p{font-size:11px;line-height:1.55;color:#c7b9ae}
+.local-admin label{display:block;font-size:11px;color:#e6d9ce;margin:10px 0}
+.local-admin input{display:block;width:100%;margin-top:5px;border:1px solid #76645b;border-radius:9px;background:#3d3736;color:#fff;padding:10px}
+.local-admin .btn{width:100%;margin-top:7px;font-size:11px}
+.local-admin>small{display:block;margin-top:8px;color:#d8b98c}
+@media(max-width:390px){.occasion-grid{grid-template-columns:1fr 1fr}.sample-grid{gap:6px}.sample-art{height:78px}.sample-card{padding:6px}.section-title{font-size:24px}.occasion-choices{grid-template-columns:1fr}}
+@media(max-width:560px){.sticky-create{display:block;position:fixed;z-index:8;left:50%;transform:translateX(-50%);bottom:13px;width:min(calc(100% - 34px),520px);padding:14px 18px;border-radius:30px;text-align:center;text-decoration:none;color:#fffaf4;font-weight:800;font-size:14px;letter-spacing:.2px;background:linear-gradient(110deg,#ad7777,#b59672);box-shadow:0 9px 28px #0008;border:1px solid #d2b18b}body{padding-bottom:70px}}
+
+</style>
 </head>
 <body>
 <div class="shell">
@@ -157,24 +332,57 @@ button:focus-visible{outline:3px solid #b99fdf;outline-offset:3px}
       <div class="promise"><span>♫ Música original</span><span>♡ 100% personalizada</span><span>✦ Un recuerdo para siempre</span></div>
     </section>
 
+
+    <section class="premium-section" id="ocasiones">
+      <div class="section-kicker">UN REGALO PARA CADA MOMENTO</div>
+      <h2 class="section-title">¿Qué historia querés convertir en música?</h2>
+      <p class="section-copy">Elegí una ocasión y empezá a imaginar esa canción que nadie más podría regalar.</p>
+      <div class="occasion-grid">
+        <button class="occasion-card wedding" type="button" data-occasion="Boda / casamiento"><span>💍</span><b>Bodas</b><small>Un amor, una promesa, una vida juntos.</small></button>
+        <button class="occasion-card quince" type="button" data-occasion="Cumpleaños de 15"><span>✨</span><b>Cumpleaños de 15</b><small>Un recuerdo para una noche inolvidable.</small></button>
+        <button class="occasion-card birthday" type="button" data-occasion="Cumpleaños"><span>🎂</span><b>Cumpleaños</b><small>Celebrá su historia de una manera única.</small></button>
+        <button class="occasion-card anniversary" type="button" data-occasion="Aniversario de pareja"><span>🥂</span><b>Aniversarios</b><small>Todo lo que construyeron merece una canción.</small></button>
+        <button class="occasion-card family" type="button" data-occasion="Día de la madre o del padre"><span>🤍</span><b>Familia</b><small>Para mamá, papá, hijos y seres queridos.</small></button>
+        <button class="occasion-card graduation" type="button" data-occasion="Graduación"><span>🎓</span><b>Graduaciones</b><small>El esfuerzo, los sueños y el nuevo comienzo.</small></button>
+        <button class="occasion-card proposal" type="button" data-occasion="Pedida de mano"><span>💌</span><b>Pedidas de mano</b><small>La pregunta que cambia una historia.</small></button>
+        <button class="occasion-card tribute" type="button" data-occasion="Homenaje o recuerdo"><span>🕊️</span><b>Homenajes</b><small>Un recuerdo que merece ser abrazado.</small></button>
+      </div>
+      <p class="section-footnote">También creamos canciones para nacimientos, fechas especiales, celebraciones religiosas y motivos personales.</p>
+    </section>
+
+    <section class="premium-section samples" id="muestras">
+      <div class="section-kicker">ESCUCHÁ Y DESCUBRÍ</div>
+      <h2 class="section-title">Cada historia tiene su propio sonido.</h2>
+      <p class="section-copy">Conocé más canciones y estilos en nuestro canal. Pronto vas a poder escuchar fragmentos seleccionados directamente desde esta página.</p>
+      <div class="sample-grid">
+        <article class="sample-card"><div class="sample-art art-love">♫<span>AMOR</span></div><b>Historias de amor</b><small>Románticas, intensas y únicas.</small></article>
+        <article class="sample-card"><div class="sample-art art-family">♡<span>FAMILIA</span></div><b>Para quienes amamos</b><small>Dedicatorias que llegan al corazón.</small></article>
+        <article class="sample-card"><div class="sample-art art-party">✦<span>CELEBRAR</span></div><b>Momentos inolvidables</b><small>Quince, bodas y cumpleaños.</small></article>
+      </div>
+      <a class="btn primary channel-link" href="https://www.youtube.com/@Cancionpersonalizada" target="_blank" rel="noopener">▶ Ver canciones en YouTube</a>
+    </section>
+
     <section class="panel" id="products">
       <div class="step">PRIMER PASO · ELEGÍ TU EXPERIENCIA</div>
       <h2>¿Qué te gustaría crear?</h2>
       <p class="hint">Seleccioná el tipo de regalo. Después vas a completar los detalles de tu canción.</p>
       <div class="products">
         <button class="product" type="button" data-product="standard">
+          <span class="package-label">ESENCIAL</span>
           <strong>♫ Canción personalizada</strong>
-          <small>Una canción creada a partir de tu historia, tus palabras y tus emociones.</small>
+          <small>Una canción original basada en tu historia, tus palabras, recuerdos y emociones.</small>
           <span class="price">Desde $10.000</span>
         </button>
         <button class="product" type="button" data-product="premium">
+          <span class="package-label featured-label">EXPERIENCIA ESPECIAL</span>
           <strong>✦ Canción con personalización especial</strong>
-          <small>Un desarrollo más detallado para cuidar cada momento y cada detalle.</small>
+          <small>Un desarrollo más profundo, con atención especial a los detalles, mensajes y momentos importantes.</small>
           <span class="price">Precio a coordinar por WhatsApp</span>
         </button>
         <button class="product" type="button" data-product="video">
+          <span class="package-label">EXPERIENCIA AUDIOVISUAL</span>
           <strong>▣ Canción + video con fotografías</strong>
-          <small>Tu canción acompañada por un video armado con las fotos que quieras compartir.</small>
+          <small>Tu canción acompañada por un video emotivo creado con las fotografías que quieras compartir.</small>
           <span class="price">Precio a coordinar por WhatsApp</span>
         </button>
       </div>
@@ -185,7 +393,7 @@ button:focus-visible{outline:3px solid #b99fdf;outline-offset:3px}
     <section class="panel hidden" id="wizard" aria-live="polite">
       <div class="progress"><div class="bar" id="bar"></div></div>
       <div class="step" id="stepnum">PASO 1</div>
-      <div class="hint" id="productLabel" style="color:var(--gold-light);margin:8px 0 0"></div>
+      <div class="hint" id="productLabel" style="color:var(--lavender-deep);margin:8px 0 0"></div>
       <h2 class="question" id="question"></h2>
       <p class="hint" id="hint"></p>
       <div id="answer"></div>
@@ -211,6 +419,45 @@ button:focus-visible{outline:3px solid #b99fdf;outline-offset:3px}
       <p class="note">WhatsApp se abrirá con el mensaje preparado. Para que recibamos tu pedido, presioná también el botón «Enviar» dentro de WhatsApp.</p>
     </section>
   </main>
+
+    <section class="premium-section testimonials" id="experiencias">
+      <div class="section-kicker">CADA REGALO DEJA UNA HUELLA</div>
+      <h2 class="section-title">Tu emoción también puede inspirar.</h2>
+      <p class="section-copy">Este espacio está preparado para compartir testimonios y reacciones reales de clientes, siempre con su autorización.</p>
+      <div class="testimonial-placeholder">
+        <span>♡</span>
+        <b>Próximamente: historias reales</b>
+        <small>Vamos a sumar aquí mensajes, fotografías y videos de personas que recibieron su canción personalizada.</small>
+      </div>
+    </section>
+
+    <section class="premium-section share-section" id="compartir">
+      <div class="section-kicker">COMPARTÍ LA EMOCIÓN</div>
+      <h2 class="section-title">Una canción empieza con una historia.</h2>
+      <p class="section-copy">Compartí esta página con alguien que quiera sorprender a una persona especial.</p>
+      <div class="share-actions">
+        <button class="btn primary" type="button" id="sharePage">↗ Compartir página</button>
+        <button class="btn secondary" type="button" id="copyPage">Copiar enlace</button>
+      </div>
+      <div class="social-links">
+        <a href="https://www.youtube.com/@Cancionpersonalizada" target="_blank" rel="noopener">YouTube</a>
+        <a href="#products">Crear una canción</a>
+      </div>
+      <p class="share-status" id="shareStatus" aria-live="polite"></p>
+    </section>
+
+    <details class="local-admin" id="localAdmin">
+      <summary>Configuración de precios · vista local</summary>
+      <p>Esta herramienta permite previsualizar precios en este navegador. Los cambios no se publican para todos los visitantes. Para administrar precios de forma centralizada se necesita conectar una base de datos y un acceso privado seguro.</p>
+      <label>Precio de referencia · canción personalizada<input id="adminStandard" type="text" value="Desde $10.000"></label>
+      <label>Precio · personalización especial<input id="adminPremium" type="text" value="A coordinar por WhatsApp"></label>
+      <label>Precio · canción + video<input id="adminVideo" type="text" value="A coordinar por WhatsApp"></label>
+      <button class="btn secondary" type="button" id="saveLocalPrices">Guardar vista previa en este dispositivo</button>
+      <button class="btn secondary" type="button" id="resetLocalPrices">Restablecer valores iniciales</button>
+      <small id="adminStatus" aria-live="polite"></small>
+    </details>
+
+<a class="sticky-create" href="#products">♫ Crear mi canción</a>
   <footer>CANCIONES PERSONALIZADAS · HECHO CON EMOCIÓN ♡</footer>
 </div>
 <script>
@@ -228,10 +475,14 @@ button:focus-visible{outline:3px solid #b99fdf;outline-offset:3px}
     {key:'destinatario',q:'¿Para quién querés crear esta canción?',h:'Elegí quién va a recibir este regalo.',type:'choice',opts:['Mi pareja','Mi mamá o mi papá','Mi hijo o hija','Un familiar','Un amigo o amiga','Otra persona'],required:true},
     {key:'nombre',q:'¿Cómo se llama esa persona?',h:'Podés escribir su nombre o el apodo que usás con cariño.',type:'text',ph:'Por ejemplo: Viviana',required:true},
     {key:'ocasion',q:'¿Qué ocasión querés celebrar?',h:'Elegí el momento especial para el que vamos a crear esta canción.',type:'choice',opts:['Boda / casamiento','Cumpleaños de 15','Cumpleaños','Aniversario de pareja','Renovación de votos','Graduación','Nacimiento o bienvenida','Día de la madre o del padre','Homenaje o recuerdo','Pedida de mano','Otra ocasión / porque sí'],required:true},
-    {key:'detalleOcasion',q:'¿Querés contarnos algún detalle de la ocasión?',h:'Por ejemplo: fecha de la boda, nombre de los novios, temática de los 15, edad que cumple o cómo será el festejo. Es opcional.',type:'area',ph:'Contanos algún detalle que quieras incluir...',required:false},
+    {key:'detalleOcasion',q:'¿Querés contarnos algún detalle de la ocasión?',h:'Contanos la fecha, la temática, el lugar o cualquier detalle que quieras incluir. Es opcional.',type:'area',ph:'Contanos algún detalle que quieras incluir...',required:false},
+    {key:'novios',q:'¿Cómo se llaman los novios?',h:'Esta pregunta aparece si elegiste una boda. Es opcional.',type:'text',ph:'Nombres de los novios',required:false,onlyOccasion:'Boda / casamiento'},
+    {key:'fechaBoda',q:'¿Cuál es la fecha de la boda?',h:'Podés indicar la fecha de la ceremonia o celebración.',type:'text',ph:'Ej.: 20 de marzo de 2027',required:false,onlyOccasion:'Boda / casamiento'},
+    {key:'quinceanera',q:'¿Cómo se llama la quinceañera y qué edad cumple?',h:'Queremos que su nombre y este momento sean protagonistas.',type:'text',ph:'Nombre y edad',required:false,onlyOccasion:'Cumpleaños de 15'},
+    {key:'temaQuince',q:'¿Tiene una temática o color especial su fiesta?',h:'Por ejemplo: princesa, flores, dorado, azul, rosa o una temática propia.',type:'text',ph:'Temática o colores de la fiesta',required:false,onlyOccasion:'Cumpleaños de 15'},
     {key:'historia',q:'Contanos su historia',h:'Compartí recuerdos, momentos importantes, anécdotas, viajes, frases o detalles que hagan única a esa persona.',type:'area',ph:'Nuestra historia comenzó...',required:true},
     {key:'estilo',q:'¿Qué estilo musical preferís?',h:'Si no tenés uno definido, elegí «Sorprendeme».',type:'choice',opts:['Bachata','Pop','Balada','Cumbia','Folklore','Rock','Cuarteto','Sorprendeme','Otro estilo'],required:true},
-    {key:'emocion',q:'¿Qué emoción querés transmitir?',h:'Elegí lo que te gustaría que sienta al escucharla.',type:'choice',opts:['Emoción y ternura','Alegría y celebración','Amor y romanticismo','Gratitud','Nostalgia y homenaje','Fuerza y superación','Sorpresa'],required:true},
+    {key:'emocion',q:'¿Qué emociones querés transmitir?',h:'Podés elegir más de una para darle a la canción el sentimiento que imaginás.',type:'multi',opts:['Amor y romanticismo','Emoción y ternura','Alegría y celebración','Gratitud','Nostalgia y homenaje','Fuerza y superación','Fe y esperanza','Sorpresa'],required:true},
     {key:'dedicatoria',q:'¿Qué mensaje especial querés dedicarle?',h:'Escribí una frase que no puede faltar. Si tenés preferencia, indicá voz masculina o femenina.',type:'area',ph:'Quiero que sepa que...',required:true},
     {key:'fecha',q:'¿Para cuándo necesitás la canción?',h:'Este dato nos ayuda a coordinar los tiempos. Es opcional.',type:'text',ph:'Ej.: 15 de diciembre / No tengo fecha definida',required:false},
     {key:'fotos',q:'¿Querés agregar fotografías para el video?',h:'Si elegiste canción + video, contanos cuántas fotos aproximadamente tenés. Si elegiste otro servicio, podés dejarlo vacío.',type:'text',ph:'Ej.: tengo entre 10 y 15 fotos',required:false,onlyVideo:true}
@@ -240,6 +491,7 @@ button:focus-visible{outline:3px solid #b99fdf;outline-offset:3px}
   let selectedProduct = null;
   let index = 0;
   let data = {};
+  let preselectedOccasion = '';
   const $ = id => document.getElementById(id);
 
   document.querySelectorAll('[data-product]').forEach(button => {
@@ -250,6 +502,7 @@ button:focus-visible{outline:3px solid #b99fdf;outline-offset:3px}
       $('productError').textContent = '';
       index = 0;
       data = {};
+      if(preselectedOccasion) data.ocasion = preselectedOccasion;
       $('intro').classList.add('hidden');
       $('products').classList.add('hidden');
       $('finish').classList.add('hidden');
@@ -259,7 +512,7 @@ button:focus-visible{outline:3px solid #b99fdf;outline-offset:3px}
     });
   });
 
-  function activeFields(){ return fields.filter(f => !f.onlyVideo || selectedProduct.key === 'video'); }
+  function activeFields(){ return fields.filter(f => (!f.onlyVideo || selectedProduct.key === 'video') && (!f.onlyOccasion || data.ocasion === f.onlyOccasion)); }
   function render(){
     const list = activeFields();
     const f = list[index];
@@ -271,13 +524,23 @@ button:focus-visible{outline:3px solid #b99fdf;outline-offset:3px}
     $('fieldError').textContent = '';
     const answer = $('answer');
     answer.replaceChildren();
-    if(f.type === 'choice'){
-      const group = document.createElement('div'); group.className = 'choices';
+    if(f.type === 'choice' || f.type === 'multi'){
+      const group = document.createElement('div');
+      group.className = f.key === 'ocasion' ? 'occasion-choices' : 'choices';
+      const symbols = {'Boda / casamiento':'💍','Cumpleaños de 15':'✨','Cumpleaños':'🎂','Aniversario de pareja':'🥂','Renovación de votos':'🤍','Graduación':'🎓','Nacimiento o bienvenida':'🍼','Día de la madre o del padre':'🌷','Homenaje o recuerdo':'🕊️','Pedida de mano':'💌','Otra ocasión / porque sí':'✦'};
       f.opts.forEach(option => {
         const button = document.createElement('button');
-        button.type = 'button'; button.className = 'choice' + (data[f.key] === option ? ' selected' : '');
-        button.textContent = option;
-        button.addEventListener('click', () => { data[f.key] = option; render(); });
+        const selected = f.type === 'multi' ? (data[f.key] || []).includes(option) : data[f.key] === option;
+        button.type = 'button';
+        button.className = (f.key === 'ocasion' ? 'occasion-choice' : 'choice') + (selected ? ' selected' : '');
+        button.textContent = f.key === 'ocasion' ? `${symbols[option] || '✦'}  ${option}` : option;
+        button.addEventListener('click', () => {
+          if(f.type === 'multi'){
+            const current = data[f.key] || [];
+            data[f.key] = current.includes(option) ? current.filter(x => x !== option) : [...current, option];
+            render();
+          } else { data[f.key] = option; render(); }
+        });
         group.appendChild(button);
       });
       answer.appendChild(group);
@@ -301,7 +564,7 @@ button:focus-visible{outline:3px solid #b99fdf;outline-offset:3px}
     const list = activeFields();
     const f = list[index];
     const value = data[f.key] || '';
-    if(f.required && !String(value).trim()){
+    if(f.required && !(Array.isArray(value) ? value.length : String(value).trim())){
       $('fieldError').textContent = 'Completá esta respuesta para continuar.';
       return;
     }
@@ -319,7 +582,7 @@ button:focus-visible{outline:3px solid #b99fdf;outline-offset:3px}
     list.forEach(f => {
       const item = document.createElement('div'); item.className = 'summary-item';
       const label = document.createElement('b'); label.textContent = f.q;
-      const value = document.createElement('span'); value.textContent = data[f.key] || 'Sin especificar';
+      const value = document.createElement('span'); value.textContent = Array.isArray(data[f.key]) ? (data[f.key].join(', ') || 'Sin especificar') : (data[f.key] || 'Sin especificar');
       item.append(label,value); summary.appendChild(item);
     });
     $('consent').checked = false;
@@ -338,7 +601,7 @@ button:focus-visible{outline:3px solid #b99fdf;outline-offset:3px}
     if(!$('consent').checked){ $('consentError').textContent = 'Marcá la casilla para confirmar que querés enviar el pedido.'; return; }
     const labels = {
       nombreCliente:'Nombre de quien realiza el pedido', destinatario:'Destinatario', nombre:'Nombre de la persona',
-      ocasion:'Ocasión', detalleOcasion:'Detalles de la ocasión', historia:'Historia y recuerdos', estilo:'Estilo musical', emocion:'Emoción buscada',
+      ocasion:'Ocasión', detalleOcasion:'Detalles de la ocasión', novios:'Nombres de los novios', fechaBoda:'Fecha de la boda', quinceanera:'Quinceañera y edad', temaQuince:'Temática de los 15', historia:'Historia y recuerdos', estilo:'Estilo musical', emocion:'Emociones buscadas',
       dedicatoria:'Dedicatoria y preferencia de voz', fecha:'Fecha en que la necesita', fotos:'Fotografías para el video'
     };
     const lines = [
@@ -349,13 +612,71 @@ button:focus-visible{outline:3px solid #b99fdf;outline-offset:3px}
       ''
     ];
     activeFields().forEach(f => {
-      const value = String(data[f.key] || '').trim();
+      const rawValue = data[f.key];
+      const value = Array.isArray(rawValue) ? rawValue.join(', ') : String(rawValue || '').trim();
       if(value) lines.push(`${labels[f.key]}: ${value}`);
     });
     lines.push('', 'Quedo a la espera para confirmar detalles, precio final y forma de entrega. ¡Gracias!');
     const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(lines.join('\n'))}`;
     window.location.href = url;
   });
+
+  // Occasion cards guide visitors into the order form with their occasion preselected.
+  document.querySelectorAll('[data-occasion]').forEach(card => {
+    card.addEventListener('click', () => {
+      preselectedOccasion = card.dataset.occasion;
+      document.querySelector('#products').scrollIntoView({behavior:'smooth',block:'start'});
+      document.querySelector('#productError').textContent = `Elegiste: ${preselectedOccasion}. Ahora seleccioná tu experiencia.`;
+    });
+  });
+
+  // Share actions use the native share sheet when available, with copy fallback.
+  const pageUrl = window.location.href.split('#')[0];
+  $('sharePage')?.addEventListener('click', async () => {
+    const payload = {title:'Canciones Personalizadas',text:'Convertí una historia especial en una canción única.',url:pageUrl};
+    try {
+      if(navigator.share) await navigator.share(payload);
+      else { await navigator.clipboard.writeText(pageUrl); $('shareStatus').textContent='Enlace copiado. Ya podés compartirlo.'; }
+    } catch(err) {
+      if(err.name !== 'AbortError') $('shareStatus').textContent='Podés copiar el enlace con el botón de abajo.';
+    }
+  });
+  $('copyPage')?.addEventListener('click', async () => {
+    try { await navigator.clipboard.writeText(pageUrl); $('shareStatus').textContent='Enlace copiado correctamente.'; }
+    catch(err) { $('shareStatus').textContent=pageUrl; }
+  });
+
+  // Local-only price preview. This does not change the live site for other visitors.
+  const defaultPrices = {standard:'Desde $10.000',premium:'A coordinar por WhatsApp',video:'A coordinar por WhatsApp'};
+  function applyLocalPrices(prices){
+    products.standard.price = prices.standard;
+    products.premium.price = prices.premium;
+    products.video.price = prices.video;
+    const cards = document.querySelectorAll('[data-product]');
+    cards.forEach(card => {
+      const price = card.querySelector('.price');
+      if(price) price.textContent = products[card.dataset.product].price;
+    });
+    $('adminStandard').value = prices.standard;
+    $('adminPremium').value = prices.premium;
+    $('adminVideo').value = prices.video;
+  }
+  try {
+    const saved = JSON.parse(localStorage.getItem('cp_local_price_preview') || 'null');
+    if(saved) applyLocalPrices({...defaultPrices,...saved});
+  } catch(err) {}
+  $('saveLocalPrices')?.addEventListener('click', () => {
+    const prices = {standard:$('adminStandard').value.trim(),premium:$('adminPremium').value.trim(),video:$('adminVideo').value.trim()};
+    localStorage.setItem('cp_local_price_preview',JSON.stringify(prices));
+    applyLocalPrices(prices);
+    $('adminStatus').textContent='Vista previa guardada en este dispositivo.';
+  });
+  $('resetLocalPrices')?.addEventListener('click', () => {
+    localStorage.removeItem('cp_local_price_preview');
+    applyLocalPrices(defaultPrices);
+    $('adminStatus').textContent='Valores iniciales restablecidos.';
+  });
+
 </script>
 </body>
 </html>
