@@ -1,235 +1,283 @@
-
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html lang="es-AR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#101010">
-<title>Canciones Personalizadas | Un regalo único</title>
-<style>
-:root {
-  --gold:#d6b46a;
-  --black:#101010;
-  --white:#fff;
-  --gray:#aaa;
-}
-*{box-sizing:border-box}
-body{
-  margin:0;background:var(--black);color:white;
-  font-family:Arial,sans-serif;line-height:1.6;
-}
-header{
-  padding:22px 18px;text-align:center;
-  border-bottom:1px solid #493e2a;
-}
-.logo{color:var(--gold);font-size:25px;font-weight:bold;letter-spacing:1px}
-.tagline{font-size:12px;color:#bbb;letter-spacing:3px}
-.hero{
-  padding:65px 22px 45px;text-align:center;
-  background:radial-gradient(ellipse at top,#40321c,#101010 70%);
-}
-.eyebrow{color:var(--gold);letter-spacing:3px;font-size:12px}
-h1{font-family:Georgia,serif;font-size:40px;line-height:1.15;margin:18px 0}
-h1 span{color:var(--gold);font-style:italic}
-.hero p{color:#ccc;max-width:470px;margin:15px auto 25px}
-.btn{
-  display:inline-block;border:0;border-radius:30px;
-  padding:14px 23px;background:var(--gold);
-  color:#17130b;font-weight:bold;text-decoration:none;
-  cursor:pointer;font-size:15px;
-}
-section{padding:42px 20px;max-width:850px;margin:auto}
-h2{font-family:Georgia,serif;text-align:center;font-size:29px}
-.subtitle{text-align:center;color:#aaa;margin-bottom:28px}
-.cards{display:grid;gap:16px}
-.card{
-  border:1px solid #55472f;border-radius:16px;
-  padding:23px;background:#191919;
-}
-.card.featured{border-color:var(--gold)}
-.card h3{color:var(--gold);font-size:20px;margin:0}
-.price{font-size:27px;font-weight:bold;margin:12px 0}
-.card p,.card li{color:#ccc;font-size:14px}
-.card ul{padding-left:20px}
-.card .btn{width:100%;text-align:center;margin-top:12px}
-.chat{
-  border:1px solid #55472f;border-radius:18px;
-  background:#191919;padding:22px;
-}
-.message{
-  background:#29251e;border-radius:14px;
-  padding:14px;margin:12px 0;color:#eee;
-}
-.message.bot{border-left:3px solid var(--gold)}
-.message.user{background:#46391f;text-align:right}
-.field{width:100%;padding:14px;margin:8px 0;
-  background:#101010;border:1px solid #65563b;
-  border-radius:10px;color:white;font-size:16px}
-textarea.field{min-height:100px;resize:vertical}
-.options{display:grid;gap:9px;margin:15px 0}
-.option{
-  background:#242424;color:white;border:1px solid #665638;
-  padding:13px;border-radius:10px;text-align:left;
-  cursor:pointer;font-size:15px;
-}
-.option:hover{border-color:var(--gold)}
-#conversation{min-height:90px}
-footer{
-  text-align:center;padding:35px 20px;
-  border-top:1px solid #493e2a;color:#aaa;font-size:13px
-}
-.gold{color:var(--gold)}
-.small{font-size:12px;color:#999}
-@media(min-width:650px){
-  .cards{grid-template-columns:repeat(3,1fr)}
-  h1{font-size:54px}
-}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#101014">
+  <meta name="description" content="Convertí tu historia, tus recuerdos y tus emociones en una canción personalizada. Comenzá tu pedido por WhatsApp.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Canciones Personalizadas | Tu historia merece su canción">
+  <meta property="og:description" content="Creá una canción única para esa persona especial. Completá el formulario y enviá tu pedido por WhatsApp.">
+  <title>Canciones Personalizadas | Creá tu canción</title>
+  <style>
+    :root{--bg:#0d0d12;--panel:#19191f;--panel2:#222129;--gold:#d3ad68;--gold-light:#f0d9ad;--text:#faf8f3;--muted:#b9b3a8;--line:#40382d;--green:#25d366;--danger:#ffb4a9}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:radial-gradient(ellipse at 50% -15%,#38291e 0,#17151a 38%,var(--bg) 76%);color:var(--text);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;min-height:100vh}
+    button,input,textarea,select{font:inherit}
+    button{cursor:pointer}
+    .shell{width:min(100%,560px);min-height:100vh;margin:auto;background:linear-gradient(180deg,rgba(20,19,23,.92),rgba(12,12,16,.98));display:flex;flex-direction:column;box-shadow:0 0 50px #0007}
+    header{padding:19px 20px 15px;text-align:center;border-bottom:1px solid #ffffff12;background:#111116eF;position:sticky;top:0;z-index:5;backdrop-filter:blur(14px)}
+    .music-mark{width:43px;height:43px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;margin:0 auto 8px;color:var(--gold-light);font:26px Georgia,serif;box-shadow:0 0 22px #d3ad6820}
+    .brand{font:22px/1.1 Georgia,serif;letter-spacing:1.5px}.brand span{color:var(--gold-light)}
+    .tagline{font-size:10px;letter-spacing:1.6px;text-transform:uppercase;color:var(--muted);margin-top:6px}
+    main{padding:20px 17px 30px;flex:1}
+    .hero{text-align:center;padding:23px 8px 20px}
+    .eyebrow,.step{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold-light);font-weight:700}
+    h1{font:normal clamp(34px,8vw,43px)/1.08 Georgia,serif;margin:13px 0 12px}
+    h1 em{color:var(--gold-light);font-weight:normal}
+    .lead{font-size:14px;line-height:1.65;color:#d1cbc0;max-width:390px;margin:0 auto}
+    .promise{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:18px}
+    .promise span{border:1px solid #6a5636;border-radius:30px;padding:7px 11px;color:var(--gold-light);font-size:11px;background:#211c17}
+    .panel{background:linear-gradient(145deg,#1d1c22,#17161b);border:1px solid #ffffff17;border-radius:20px;padding:18px;margin-top:14px;box-shadow:0 12px 35px #0002}
+    .panel h2{font:normal 25px/1.2 Georgia,serif;margin:9px 0 8px}
+    .hint{font-size:13px;line-height:1.55;color:var(--muted);margin:0 0 17px}
+    .products{display:grid;gap:10px}
+    .product{width:100%;text-align:left;color:var(--text);background:#111116;border:1px solid #4a4134;border-radius:14px;padding:15px;transition:.18s}
+    .product:hover,.product.selected{border-color:var(--gold);background:#292218;transform:translateY(-1px)}
+    .product strong{display:block;font-size:15px;margin-bottom:5px}
+    .product small{display:block;color:#c9c1b5;line-height:1.45;font-size:12px}
+    .product .price{display:block;color:var(--gold-light);font-size:12px;margin-top:8px}
+    .progress{height:5px;background:#3b3731;border-radius:20px;overflow:hidden;margin:0 0 17px}
+    .bar{height:100%;width:0;background:linear-gradient(90deg,#9e7942,var(--gold-light));transition:width .25s}
+    .question{font:normal 24px/1.2 Georgia,serif;margin:9px 0 8px}
+    .field{display:block;width:100%;border:1px solid #51483b;border-radius:12px;background:#101015;color:#fff;padding:14px 13px;outline:none;min-height:49px}
+    .field:focus{border-color:var(--gold);box-shadow:0 0 0 3px #d3ad6818}
+    textarea.field{min-height:125px;resize:vertical}
+    .field::placeholder{color:#77736d}
+    .choices{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+    .choice{background:#111116;color:#eee;border:1px solid #4b443a;border-radius:11px;padding:12px 10px;text-align:left;font-size:13px;min-height:48px}
+    .choice.selected{border-color:var(--gold);background:#2a2319;color:var(--gold-light)}
+    .actions{display:flex;gap:9px;margin-top:18px}
+    .btn{border:0;border-radius:30px;padding:14px 17px;font-weight:750;font-size:14px;min-height:48px}
+    .primary{background:linear-gradient(110deg,#c49a52,#f0d9ad);color:#21180c;flex:1}
+    .secondary{background:transparent;border:1px solid #665943;color:#e8d9bb}
+    .whatsapp{background:var(--green);color:#062b15;display:flex;align-items:center;justify-content:center;gap:9px;width:100%;font-size:15px}
+    .note{text-align:center;color:#8f897f;font-size:11px;line-height:1.5;margin:14px 4px 0}
+    .summary{display:grid;gap:12px;margin:15px 0;color:#e8e2d8;font-size:13px;line-height:1.5}
+    .summary-item{border-bottom:1px solid #ffffff13;padding-bottom:10px;overflow-wrap:anywhere}
+    .summary-item b{display:block;color:var(--gold-light);font-size:11px;text-transform:uppercase;letter-spacing:.6px;margin-bottom:3px}
+    .checkline{display:flex;gap:9px;align-items:flex-start;color:#c9c2b7;font-size:12px;line-height:1.45;margin-top:14px}
+    .checkline input{accent-color:var(--gold);margin-top:2px}
+    .error{color:var(--danger);font-size:12px;margin-top:9px;min-height:18px}
+    footer{text-align:center;border-top:1px solid #ffffff13;padding:17px;color:#8e887e;font-size:10px;letter-spacing:.6px}
+    .hidden{display:none!important}
+    @media(max-width:390px){main{padding:15px 13px 25px}.panel{padding:15px}.choices{grid-template-columns:1fr}.brand{font-size:20px}}
+  </style>
 </head>
 <body>
+<div class="shell">
+  <header>
+    <div class="music-mark">♫</div>
+    <div class="brand">CANCIONES <span>PERSONALIZADAS</span></div>
+    <div class="tagline">Tu historia merece tener su propia canción</div>
+  </header>
+  <main>
+    <section class="hero" id="intro">
+      <div class="eyebrow">Un regalo que emociona para siempre</div>
+      <h1>Tu historia.<br><em>Tu canción única.</em></h1>
+      <p class="lead">Contanos para quién es, qué vivieron y qué emoción querés transmitir. Nosotros convertimos esos recuerdos en una canción hecha especialmente para esa persona.</p>
+      <div class="promise"><span>♫ Música original</span><span>♡ 100% personalizada</span><span>✦ Un recuerdo para siempre</span></div>
+    </section>
 
-<header>
-  <div class="logo">♫ CANCIONES PERSONALIZADAS</div>
-  <div class="tagline">TU HISTORIA HECHA CANCIÓN</div>
-</header>
-
-<div class="hero">
-  <div class="eyebrow">REGALÁ EMOCIONES</div>
-  <h1>Hay historias que<br>merecen convertirse<br>en <span>canciones.</span></h1>
-  <p>Creamos canciones únicas con inteligencia artificial, inspiradas en tus recuerdos, tus sentimientos y las personas que más querés.</p>
-  <a href="#asistente" class="btn">CREAR MI CANCIÓN ♫</a>
-</div>
-
-<section id="servicios">
-  <h2>Nuestras experiencias</h2>
-  <p class="subtitle">Elegí cómo querés sorprender.</p>
-  <div class="cards">
-
-    <div class="card featured">
-      <h3>♫ Canción especial</h3>
-      <div class="price">$10.000</div>
-      <p>Una canción personalizada a partir de tu historia.</p>
-      <ul>
-        <li>Letra original</li>
-        <li>Música personalizada</li>
-        <li>Portada de la canción</li>
-        <li>Archivo listo para compartir</li>
-      </ul>
-      <a href="#asistente" class="btn" onclick="choose('basica')">ELEGIR</a>
-    </div>
-
-    <div class="card">
-      <h3>♡ Canción premium</h3>
-      <div class="price">A consultar</div>
-      <p>Una experiencia más profunda y exclusiva.</p>
-      <ul>
-        <li>Mayor personalización</li>
-        <li>Detalles y recuerdos especiales</li>
-        <li>Elección de estilo musical</li>
-        <li>Atención personalizada</li>
-      </ul>
-      <a href="#asistente" class="btn" onclick="choose('premium')">CONSULTAR</a>
-    </div>
-
-    <div class="card">
-      <h3>▶ Canción + video</h3>
-      <div class="price">A consultar</div>
-      <p>Convertí tus recuerdos en una experiencia audiovisual.</p>
-      <ul>
-        <li>Canción personalizada</li>
-        <li>Video con fotografías</li>
-        <li>Diseño emotivo</li>
-        <li>Atención por WhatsApp</li>
-      </ul>
-      <a href="#asistente" class="btn" onclick="choose('video')">CONSULTAR</a>
-    </div>
-
-  </div>
-</section>
-
-<section id="asistente">
-  <h2>Asistente de Canciones Personalizadas</h2>
-  <p class="subtitle">Contanos tu historia. Nosotros te ayudamos a convertirla en música.</p>
-
-  <div class="chat">
-    <div id="conversation">
-      <div class="message bot">
-        ¡Hola! ♡ Soy el Asistente de Canciones Personalizadas.
-        Estoy acá para ayudarte a crear un regalo inolvidable.
-        <br><br>¿Para quién querés hacer la canción?
+    <section class="panel" id="products">
+      <div class="step">PRIMER PASO · ELEGÍ TU EXPERIENCIA</div>
+      <h2>¿Qué te gustaría crear?</h2>
+      <p class="hint">Seleccioná el tipo de regalo. Después vas a completar los detalles de tu canción.</p>
+      <div class="products">
+        <button class="product" type="button" data-product="standard">
+          <strong>♫ Canción personalizada</strong>
+          <small>Una canción creada a partir de tu historia, tus palabras y tus emociones.</small>
+          <span class="price">Desde $10.000</span>
+        </button>
+        <button class="product" type="button" data-product="premium">
+          <strong>✦ Canción con personalización especial</strong>
+          <small>Un desarrollo más detallado para cuidar cada momento y cada detalle.</small>
+          <span class="price">Precio a coordinar por WhatsApp</span>
+        </button>
+        <button class="product" type="button" data-product="video">
+          <strong>▣ Canción + video con fotografías</strong>
+          <small>Tu canción acompañada por un video armado con las fotos que quieras compartir.</small>
+          <span class="price">Precio a coordinar por WhatsApp</span>
+        </button>
       </div>
-    </div>
-    <input class="field" id="name" placeholder="Nombre de la persona">
-    <input class="field" id="occasion" placeholder="Cumpleaños, aniversario, sorpresa...">
-    <textarea class="field" id="story" placeholder="Contame su historia, recuerdos, momentos especiales y qué te gustaría decirle..."></textarea>
-    <input class="field" id="style" placeholder="Estilo musical preferido (pop, bachata, cumbia...)">
-    <input class="field" id="dedication" placeholder="Tu nombre o dedicatoria">
-    <div class="options">
-      <button class="option" onclick="choose('basica')">♫ Canción especial - $10.000</button>
-      <button class="option" onclick="choose('premium')">♡ Canción premium - consultar</button>
-      <button class="option" onclick="choose('video')">▶ Canción + video con fotos - consultar</button>
-    </div>
-    <button class="btn" style="width:100%" onclick="sendOrder()">ENVIAR MI HISTORIA</button>
-    <p class="small">Tus respuestas se enviarán por WhatsApp para coordinar tu pedido. No compartas información sensible.</p>
-  </div>
-</section>
+      <div class="error" id="productError" aria-live="polite"></div>
+      <p class="note">El precio final y los detalles del trabajo se confirman personalmente por WhatsApp antes de avanzar.</p>
+    </section>
 
-<section style="text-align:center">
-  <h2>Un regalo que no se olvida.</h2>
-  <p class="subtitle">Cada persona tiene una historia. Hagamos que suene para siempre.</p>
-  <a class="btn" href="https://wa.me/5491137658829?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20una%20canci%C3%B3n%20personalizada.">HABLAR POR WHATSAPP</a>
-</section>
+    <section class="panel hidden" id="wizard" aria-live="polite">
+      <div class="progress"><div class="bar" id="bar"></div></div>
+      <div class="step" id="stepnum">PASO 1</div>
+      <div class="hint" id="productLabel" style="color:var(--gold-light);margin:8px 0 0"></div>
+      <h2 class="question" id="question"></h2>
+      <p class="hint" id="hint"></p>
+      <div id="answer"></div>
+      <div class="error" id="fieldError" aria-live="polite"></div>
+      <div class="actions">
+        <button class="btn secondary" type="button" id="back">Volver</button>
+        <button class="btn primary" type="button" id="next">Continuar</button>
+      </div>
+      <p class="note">Tus respuestas se usan para preparar el pedido. Al finalizar, se abrirá WhatsApp para que puedas revisarlo y enviarlo.</p>
+    </section>
 
-<footer>
-  <div class="logo">CANCIONES PERSONALIZADAS</div>
-  <p>Tu historia, nuestra inspiración.</p>
-  <p>© 2026 Canciones Personalizadas</p>
-</footer>
-
+    <section class="panel hidden" id="finish">
+      <div class="step">ÚLTIMO PASO · REVISÁ TU PEDIDO</div>
+      <h2>¡Tu canción empieza con tu historia!</h2>
+      <p class="hint" id="chosenProduct"></p>
+      <div class="summary" id="summary"></div>
+      <label class="checkline"><input type="checkbox" id="consent"> <span>Confirmo que revisé la información y quiero enviarla por WhatsApp para continuar con mi pedido.</span></label>
+      <div class="error" id="consentError" aria-live="polite"></div>
+      <div class="actions">
+        <button class="btn secondary" type="button" id="edit">Editar</button>
+      </div>
+      <button class="btn whatsapp" type="button" id="send" style="margin-top:11px"> <span aria-hidden="true">☏</span> Enviar mi pedido por WhatsApp</button>
+      <p class="note">WhatsApp se abrirá con el mensaje preparado. Para que recibamos tu pedido, presioná también el botón «Enviar» dentro de WhatsApp.</p>
+    </section>
+  </main>
+  <footer>CANCIONES PERSONALIZADAS · HECHO CON EMOCIÓN ♡</footer>
+</div>
 <script>
-let selected = "basica";
+  // Número comercial tomado de la información de contacto compartida: 11 3765-8829 (Argentina).
+  // Formato internacional para wa.me: 549 + código de área + número, sin signos ni espacios.
+  const WHATSAPP_NUMBER = '5491137658829';
 
-function choose(type){
-  selected = type;
-  const names = {
-    basica:"Canción especial - $10.000",
-    premium:"Canción premium - consultar precio",
-    video:"Canción + video con fotografías - consultar precio"
+  const products = {
+    standard: {name:'Canción personalizada', price:'Desde $10.000'},
+    premium: {name:'Canción con personalización especial', price:'A coordinar por WhatsApp'},
+    video: {name:'Canción + video con fotografías', price:'A coordinar por WhatsApp'}
   };
-  document.getElementById("conversation").innerHTML =
-    '<div class="message user">'+names[type]+'</div>'+
-    '<div class="message bot">¡Excelente elección! ♡ Completá tus datos y contanos la historia para preparar tu propuesta.</div>';
-}
+  const fields = [
+    {key:'nombreCliente',q:'¿Cómo te llamás?',h:'Así sabemos con quién estamos coordinando el pedido.',type:'text',ph:'Tu nombre',required:true},
+    {key:'destinatario',q:'¿Para quién querés crear esta canción?',h:'Elegí quién va a recibir este regalo.',type:'choice',opts:['Mi pareja','Mi mamá o mi papá','Mi hijo o hija','Un familiar','Un amigo o amiga','Otra persona'],required:true},
+    {key:'nombre',q:'¿Cómo se llama esa persona?',h:'Podés escribir su nombre o el apodo que usás con cariño.',type:'text',ph:'Por ejemplo: Viviana',required:true},
+    {key:'ocasion',q:'¿Qué ocasión celebran?',h:'Cumpleaños, aniversario, boda, homenaje, agradecimiento o simplemente porque sí.',type:'text',ph:'Contanos qué queremos celebrar...',required:true},
+    {key:'historia',q:'Contanos su historia',h:'Compartí recuerdos, momentos importantes, anécdotas, viajes, frases o detalles que hagan única a esa persona.',type:'area',ph:'Nuestra historia comenzó...',required:true},
+    {key:'estilo',q:'¿Qué estilo musical preferís?',h:'Si no tenés uno definido, elegí «Sorprendeme».',type:'choice',opts:['Bachata','Pop','Balada','Cumbia','Folklore','Rock','Cuarteto','Sorprendeme','Otro estilo'],required:true},
+    {key:'emocion',q:'¿Qué emoción querés transmitir?',h:'Elegí lo que te gustaría que sienta al escucharla.',type:'choice',opts:['Emoción y ternura','Alegría y celebración','Amor y romanticismo','Gratitud','Nostalgia y homenaje','Fuerza y superación','Sorpresa'],required:true},
+    {key:'dedicatoria',q:'¿Qué mensaje especial querés dedicarle?',h:'Escribí una frase que no puede faltar. Si tenés preferencia, indicá voz masculina o femenina.',type:'area',ph:'Quiero que sepa que...',required:true},
+    {key:'fecha',q:'¿Para cuándo necesitás la canción?',h:'Este dato nos ayuda a coordinar los tiempos. Es opcional.',type:'text',ph:'Ej.: 15 de diciembre / No tengo fecha definida',required:false},
+    {key:'fotos',q:'¿Querés agregar fotografías para el video?',h:'Si elegiste canción + video, contanos cuántas fotos aproximadamente tenés. Si elegiste otro servicio, podés dejarlo vacío.',type:'text',ph:'Ej.: tengo entre 10 y 15 fotos',required:false,onlyVideo:true}
+  ];
 
-function sendOrder(){
-  const name=document.getElementById("name").value.trim();
-  const occasion=document.getElementById("occasion").value.trim();
-  const story=document.getElementById("story").value.trim();
-  const style=document.getElementById("style").value.trim();
-  const dedication=document.getElementById("dedication").value.trim();
+  let selectedProduct = null;
+  let index = 0;
+  let data = {};
+  const $ = id => document.getElementById(id);
 
-  if(!name || !story){
-    alert("Por favor, completá el nombre y contanos la historia.");
-    return;
+  document.querySelectorAll('[data-product]').forEach(button => {
+    button.addEventListener('click', () => {
+      selectedProduct = products[button.dataset.product];
+      selectedProduct.key = button.dataset.product;
+      document.querySelectorAll('[data-product]').forEach(b => b.classList.toggle('selected', b === button));
+      $('productError').textContent = '';
+      index = 0;
+      data = {};
+      $('intro').classList.add('hidden');
+      $('products').classList.add('hidden');
+      $('finish').classList.add('hidden');
+      $('wizard').classList.remove('hidden');
+      render();
+      window.scrollTo({top:0,behavior:'smooth'});
+    });
+  });
+
+  function activeFields(){ return fields.filter(f => !f.onlyVideo || selectedProduct.key === 'video'); }
+  function render(){
+    const list = activeFields();
+    const f = list[index];
+    $('stepnum').textContent = `PASO ${index+1} DE ${list.length}`;
+    $('productLabel').textContent = `Experiencia: ${selectedProduct.name} · ${selectedProduct.price}`;
+    $('bar').style.width = `${((index+1)/list.length)*100}%`;
+    $('question').textContent = f.q;
+    $('hint').textContent = f.h;
+    $('fieldError').textContent = '';
+    const answer = $('answer');
+    answer.replaceChildren();
+    if(f.type === 'choice'){
+      const group = document.createElement('div'); group.className = 'choices';
+      f.opts.forEach(option => {
+        const button = document.createElement('button');
+        button.type = 'button'; button.className = 'choice' + (data[f.key] === option ? ' selected' : '');
+        button.textContent = option;
+        button.addEventListener('click', () => { data[f.key] = option; render(); });
+        group.appendChild(button);
+      });
+      answer.appendChild(group);
+    } else {
+      const input = document.createElement(f.type === 'area' ? 'textarea' : 'input');
+      input.className = 'field';
+      if(f.type === 'text') input.type = 'text';
+      input.placeholder = f.ph;
+      input.value = data[f.key] || '';
+      input.maxLength = f.type === 'area' ? 1600 : 180;
+      input.autocomplete = 'off';
+      input.addEventListener('input', () => { data[f.key] = input.value; });
+      answer.appendChild(input);
+      input.focus({preventScroll:true});
+    }
+    $('back').style.visibility = index === 0 ? 'hidden' : 'visible';
+    $('next').textContent = index === list.length-1 ? 'Ver resumen' : 'Continuar';
   }
 
-  const products={
-    basica:"Canción especial - $10.000",
-    premium:"Canción premium - consultar",
-    video:"Canción + video con fotografías - consultar"
-  };
+  $('next').addEventListener('click', () => {
+    const list = activeFields();
+    const f = list[index];
+    const value = data[f.key] || '';
+    if(f.required && !String(value).trim()){
+      $('fieldError').textContent = 'Completá esta respuesta para continuar.';
+      return;
+    }
+    if(index < list.length-1){ index++; render(); }
+    else showSummary();
+  });
+  $('back').addEventListener('click', () => { if(index > 0){ index--; render(); } });
 
-  const text =
-    "Hola, quiero crear una canción personalizada.%0A%0A"+
-    "Producto: "+encodeURIComponent(products[selected])+"%0A"+
-    "Persona: "+encodeURIComponent(name)+"%0A"+
-    "Ocasión: "+encodeURIComponent(occasion)+"%0A"+
-    "Historia: "+encodeURIComponent(story)+"%0A"+
-    "Estilo musical: "+encodeURIComponent(style)+"%0A"+
-    "Dedicatoria: "+encodeURIComponent(dedication);
+  function showSummary(){
+    $('wizard').classList.add('hidden');
+    $('finish').classList.remove('hidden');
+    $('chosenProduct').textContent = `${selectedProduct.name} · ${selectedProduct.price}`;
+    const list = activeFields();
+    const summary = $('summary'); summary.replaceChildren();
+    list.forEach(f => {
+      const item = document.createElement('div'); item.className = 'summary-item';
+      const label = document.createElement('b'); label.textContent = f.q;
+      const value = document.createElement('span'); value.textContent = data[f.key] || 'Sin especificar';
+      item.append(label,value); summary.appendChild(item);
+    });
+    $('consent').checked = false;
+    $('consentError').textContent = '';
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
 
-  window.open("https://wa.me/5491137658829?text="+text,"_blank");
-}
+  $('edit').addEventListener('click', () => {
+    $('finish').classList.add('hidden');
+    $('wizard').classList.remove('hidden');
+    render();
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+
+  $('send').addEventListener('click', () => {
+    if(!$('consent').checked){ $('consentError').textContent = 'Marcá la casilla para confirmar que querés enviar el pedido.'; return; }
+    const labels = {
+      nombreCliente:'Nombre de quien realiza el pedido', destinatario:'Destinatario', nombre:'Nombre de la persona',
+      ocasion:'Ocasión', historia:'Historia y recuerdos', estilo:'Estilo musical', emocion:'Emoción buscada',
+      dedicatoria:'Dedicatoria y preferencia de voz', fecha:'Fecha en que la necesita', fotos:'Fotografías para el video'
+    };
+    const lines = [
+      '¡Hola! Quiero encargar una canción personalizada.',
+      '',
+      `SERVICIO: ${selectedProduct.name}`,
+      `PRECIO DE REFERENCIA: ${selectedProduct.price}`,
+      ''
+    ];
+    activeFields().forEach(f => {
+      const value = String(data[f.key] || '').trim();
+      if(value) lines.push(`${labels[f.key]}: ${value}`);
+    });
+    lines.push('', 'Quedo a la espera para confirmar detalles, precio final y forma de entrega. ¡Gracias!');
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(lines.join('\n'))}`;
+    window.location.href = url;
+  });
 </script>
 </body>
 </html>
