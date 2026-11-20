@@ -4,14 +4,27 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#111014">
-<title>Canciones Personalizadas | Tu canción única</title>
-<meta name="description" content="Convertí tus recuerdos, sentimientos y momentos especiales en una canción creada exclusivamente para esa persona. Pedila por WhatsApp.">
+<title>Canciones Personalizadas en Argentina | Tu canción única por WhatsApp</title>
+<meta name="description" content="Canciones personalizadas para bodas, cumpleaños de 15, cumpleaños y momentos especiales. Contanos tu historia y la convertimos en una canción única. Desde $10.000. Pedila por WhatsApp.">
+<meta name="robots" content="index,follow">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Canciones Personalizadas | Tu canción única">
-<meta property="og:description" content="Hay regalos que se entregan. Y hay canciones que se quedan para siempre.">
+<meta property="og:locale" content="es_AR">
+<meta property="og:site_name" content="Canciones Personalizadas">
+<meta property="og:description" content="Hay regalos que se entregan. Y hay canciones que se quedan para siempre. Pedí la tuya en 2 minutos.">
+<!-- IMPORTANTE: reemplazá TU-USUARIO y NOMBRE-DEL-REPO por los tuyos (ver README) -->
+<meta property="og:image" content="https://TU-USUARIO.github.io/NOMBRE-DEL-REPO/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://TU-USUARIO.github.io/NOMBRE-DEL-REPO/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=DM+Sans:wght@400;500;700&family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Canciones personalizadas", "serviceType": "Composición de canciones personalizadas", "description": "Canciones originales creadas a partir de tu historia para bodas, cumpleaños de 15, cumpleaños y otros momentos especiales.", "provider": {"@type": "Organization", "name": "Canciones Personalizadas", "sameAs": ["https://www.youtube.com/@Cancionpersonalizada", "https://www.tiktok.com/@cancion_personalizada", "https://www.instagram.com/cancion.personalizada"]}, "areaServed": {"@type": "Country", "name": "Argentina"}, "offers": {"@type": "Offer", "priceCurrency": "ARS", "priceSpecification": {"@type": "PriceSpecification", "priceCurrency": "ARS", "minPrice": 10000}, "description": "Canción personalizada desde $10.000"}}</script>
 <style>
 :root{--c1:#111014;--c2:#1A101C;--c3:#29152B;--v:#693B79;--m:#B84279;--r:#C77D9B;--g:#E5C394;--b:#F0DCC8;--t:#F8F1F5;--mute:#e3d2de;
 --serif:"Cormorant Garamond","Playfair Display",Georgia,serif;--sans:"DM Sans",system-ui,sans-serif;--ui:"Manrope","Inter",system-ui,sans-serif;--script:"Cormorant Garamond","Playfair Display",Georgia,serif}
@@ -37,7 +50,21 @@ header .w{display:flex;align-items:center;justify-content:space-between;min-heig
 .brand{font:700 19px var(--serif);letter-spacing:.1em;color:var(--b);line-height:1.15}.brand i{color:var(--g);font-style:normal}
 nav{display:flex;gap:20px;align-items:center}nav a{color:#f0e2ea;text-decoration:none;font:700 14.5px var(--ui)}nav a:hover{color:var(--g)}
 .sh{width:44px;height:44px;border-radius:50%;border:1px solid #E5C39455;color:var(--g);font-size:18px}
-@media(max-width:640px){nav a{display:none}}
+.hd{display:flex;align-items:center;gap:10px}
+nav a.nav-redes{padding:9px 16px;border:1px solid #E5C39477;border-radius:30px;color:var(--g);background:#B8427922}
+nav a.nav-redes:hover{background:#B8427944;color:#fff}
+.burger{display:none;width:48px;height:48px;border-radius:50%;border:1px solid #E5C39477;background:#ffffff0d;place-items:center;align-content:center;gap:5px;padding:0}
+.burger span{display:block;width:22px;height:2px;border-radius:2px;background:var(--g);transition:transform .3s,opacity .2s}
+header.open .burger span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+header.open .burger span:nth-child(2){opacity:0}
+header.open .burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media(max-width:1000px){
+ .burger{display:grid}
+ nav{position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:stretch;gap:0;padding:0 18px;background:#1A101C;border-bottom:1px solid #E5C39455;box-shadow:0 26px 50px #000d;max-height:0;overflow:hidden;visibility:hidden;opacity:0;transition:max-height .35s,opacity .25s,visibility .35s,padding .35s}
+ header.open nav{max-height:calc(100vh - 72px);overflow-y:auto;visibility:visible;opacity:1;padding:6px 18px calc(18px + env(safe-area-inset-bottom))}
+ nav a{display:flex;align-items:center;min-height:58px;padding:0 6px;font-size:18px;border-bottom:1px solid #ffffff17}
+ nav a.nav-redes{margin-top:12px;justify-content:center;min-height:58px;border:1.5px solid var(--g);border-radius:40px;background:linear-gradient(110deg,#e0509a,#B84279 45%,#8a4a9c);color:#fff;letter-spacing:.06em;text-transform:uppercase;font-size:16px}
+}
 .hero{padding:36px 0 40px;position:relative}
 .hero .w{display:grid;gap:38px;align-items:center}
 @media(min-width:860px){.hero .w{grid-template-columns:1.15fr .85fr}}
@@ -103,17 +130,62 @@ summary{cursor:pointer;min-height:56px;display:flex;align-items:center;font:700 
 summary::after{content:"+";color:var(--g);font-size:24px}details[open] summary::after{content:"–"}
 details p{color:#ecdde6;font-size:17px;padding:0 0 18px}
 .quote{font-family:var(--serif);font-style:italic;font-size:19px}
-.social-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:26px}
-.social-card{display:flex;flex-direction:column;align-items:flex-start;gap:10px;min-height:190px;padding:24px;border-radius:22px;text-decoration:none;color:var(--t);background:linear-gradient(150deg,#3a1b40,#211323 72%,#171019);border:1px solid #D88AB066;box-shadow:0 16px 40px #0006;transition:transform .2s,border-color .2s,box-shadow .2s}
-.social-card:hover{transform:translateY(-4px);border-color:#E5C394aa;box-shadow:0 18px 44px #B8427944}
-.social-icon{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(135deg,#8a4a9c,#e0509a);color:#fff;font:800 25px var(--ui);box-shadow:0 8px 24px #B8427955}
-.social-card strong{font:800 20px var(--ui);color:#fff}
-.social-card span.copy{color:#ecdde6;font-size:15.5px;line-height:1.45;flex:1}
-.social-cta{font:800 13px var(--ui);letter-spacing:.08em;text-transform:uppercase;color:#F0DCC8}
-.social-foot{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 22px;margin:20px 0 4px}
-.social-foot a{color:#F0DCC8;text-decoration:none;font:700 14px var(--ui)}
-.social-foot a:hover{color:#F0A9C8;text-decoration:underline}
-@media(max-width:640px){.social-card{min-height:170px}.social-grid{grid-template-columns:1fr}}
+/* redes sociales */
+#redes{position:relative}
+#redes .head{text-align:center;max-width:760px;margin:0 auto 34px}
+#redes h2{text-transform:uppercase;letter-spacing:.03em;font-size:clamp(31px,7.4vw,54px);margin-bottom:14px}
+#redes .sub{margin:0 auto}
+.kick{display:inline-block;font:800 13px var(--ui);letter-spacing:.22em;text-transform:uppercase;color:var(--g);margin-bottom:12px}
+.social-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.social-card{position:relative;display:flex;flex-direction:column;gap:12px;padding:28px 24px 24px;border-radius:26px;color:var(--t);background:linear-gradient(155deg,var(--ac1,#4d2354) 0%,#2c1630 52%,#171019 100%);border:1px solid #E5C39466;box-shadow:0 18px 44px #0008,0 0 0 1px #00000040,inset 0 1px #ffffff1c;overflow:hidden;transition:transform .45s,opacity .6s,border-color .3s,box-shadow .3s}
+.social-card::before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:linear-gradient(90deg,transparent,var(--ac2,#E5C394),transparent);opacity:.9}
+.social-card::after{content:"";position:absolute;width:210px;height:210px;right:-70px;top:-80px;border-radius:50%;background:radial-gradient(circle,var(--gl,#B8427988),transparent 70%);opacity:.35;pointer-events:none;transition:opacity .3s}
+.social-card:hover{transform:translateY(-6px);border-color:#E5C394cc;box-shadow:0 24px 54px #000a,0 0 40px #B8427940}
+.social-card:hover::after{opacity:.55}
+.yt{--ac1:#5a1f4f;--ac2:#e0509a;--gl:#e0509a88}
+.tt{--ac1:#3f2260;--ac2:#9b6bd1;--gl:#9b6bd188}
+.ig{--ac1:#5a2455;--ac2:#E5C394;--gl:#E5C39488}
+.social-icon{position:relative;z-index:1;width:68px;height:68px;border-radius:20px;display:grid;place-items:center;color:#fff;background:linear-gradient(135deg,#8a4a9c,#e0509a);border:1px solid #ffffff33;box-shadow:0 10px 28px #B8427966,inset 0 1px #ffffff40;transition:transform .3s}
+.social-card:hover .social-icon{transform:rotate(-6deg) scale(1.06)}
+.social-icon svg{width:36px;height:36px;display:block}
+.social-name{position:relative;z-index:1;font:800 13px var(--ui);letter-spacing:.24em;color:var(--g);text-transform:uppercase;margin-top:6px}
+.social-card h3{position:relative;z-index:1;font-size:clamp(30px,7vw,36px);color:#fff;line-height:1.1}
+.social-card p{position:relative;z-index:1;color:#f1e4ec;font-size:17px;line-height:1.55;flex:1}
+.social-btn{position:relative;z-index:1;width:100%;min-height:60px;margin-top:8px;font-size:15px;padding:0 20px;text-align:center}
+.social-btn svg{width:18px;height:18px;flex:none}
+.rv .social-card{opacity:0;transform:translateY(22px)}
+.rv .social-card.in-view{opacity:1;transform:none}
+.rv .social-card.in-view:hover{transform:translateY(-6px)}
+.rv .social-card:nth-child(2){transition-delay:.12s}.rv .social-card:nth-child(3){transition-delay:.24s}
+.hero-redes{margin-top:18px;font-size:16px}
+.hero-redes a{color:var(--g);font-weight:700;text-decoration:none;border-bottom:1px solid #E5C39477;padding:10px 0;display:inline-block}
+.hero-redes a:hover{color:#F0A9C8}
+.social-foot{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 14px;margin:22px 0 4px}
+.social-foot a{display:inline-flex;align-items:center;gap:9px;min-height:46px;padding:0 18px;border-radius:30px;border:1px solid #E5C39455;background:#ffffff0a;color:#F0DCC8;text-decoration:none;font:700 14.5px var(--ui);transition:.2s}
+.social-foot a svg{width:19px;height:19px;flex:none}
+.ej-links{margin-top:28px;gap:14px}.ej-links a{min-height:58px;padding:0 26px;font-size:16.5px;border-color:#E5C394aa;background:linear-gradient(135deg,#B8427944,#693B7944)}.ej-links a svg{width:24px;height:24px}
+.social-foot a:hover{color:#fff;border-color:var(--g);background:#B8427933}
+@media(max-width:860px){.social-grid{grid-template-columns:1fr;max-width:520px;margin:auto}.social-card{padding:26px 22px 22px}}
+/* banner de temporada */
+.promo{position:relative;background:linear-gradient(90deg,#7a3f8c,#B84279 50%,#7a3f8c);color:#fff;text-align:center;padding:6px 52px;border-bottom:1px solid #E5C39455}
+.promo a{display:inline-flex;align-items:center;min-height:44px;color:#fff;text-decoration:none;font:700 15px/1.35 var(--ui)}
+.promo a:hover{text-decoration:underline}
+.promo button{position:absolute;right:4px;top:50%;transform:translateY(-50%);width:44px;height:44px;color:#fff;font-size:18px;border-radius:50%}
+/* video */
+#video .w{display:grid;gap:26px 48px;align-items:center;grid-template-areas:"t" "v" "c"}
+#video .vt{grid-area:t}#video .vf{grid-area:v}#video .vc{grid-area:c;display:flex;justify-content:center}
+#video .sub{margin-bottom:0}
+.vf{justify-self:center;width:min(100%,330px);border-radius:32px;padding:10px;background:linear-gradient(160deg,#3b2342,#16101a);border:1px solid #E5C39466;box-shadow:0 0 80px #B8427944,0 26px 56px #000a}
+.vf video{display:block;width:100%;aspect-ratio:576/854;border-radius:23px;background:#000;object-fit:cover}
+@media(min-width:860px){#video .w{grid-template-columns:1fr 340px;grid-template-areas:"t v" "c v";align-content:center}#video .vc{justify-content:flex-start;align-self:start}}
+/* avisos */
+.entrega{display:inline-block;margin:0 0 24px;padding:12px 20px;border-radius:30px;border:1px solid #E5C394aa;background:#B8427926;color:#F8E6CE;font:700 16px var(--ui)}
+.resume{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 14px;margin-bottom:16px;padding:12px 16px;border-radius:16px;border:1px solid #E5C39477;background:#B8427924;font:600 15px/1.4 var(--ui);color:#F8E6CE}
+.resume[hidden]{display:none}
+.resume button{min-height:44px;padding:0 16px;border-radius:30px;border:1px solid var(--g);color:var(--g);font:800 13px var(--ui);letter-spacing:.06em;text-transform:uppercase}
+.lnk{color:var(--g);font-weight:700;text-decoration:underline;text-underline-offset:3px;display:inline-block;padding:10px 2px}
+.btn svg.wi{width:22px;height:22px}
+.o.wao{border-color:#25D366aa}.o.wao:hover{background:#25D36622}
 footer{text-align:center;padding:50px 18px calc(110px + env(safe-area-inset-bottom));border-top:1px solid #E5C39422;color:#e3d2de;font-size:15px}
 .wi{fill:currentColor;flex:none}
 .fw{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:30;width:62px;height:62px;border-radius:18px;background:linear-gradient(160deg,#6BE98C,#25D366 60%,#1DB954);color:#fff;display:grid;place-items:center;text-decoration:none;box-shadow:0 10px 28px #000a,0 0 24px #25D36655,inset 0 1px #ffffff66}
@@ -122,45 +194,70 @@ footer{text-align:center;padding:50px 18px calc(110px + env(safe-area-inset-bott
 </style>
 </head>
 <body>
+<div class="promo" id="promo" hidden><a id="promo-t" href="#crear"></a><button id="promo-x" type="button" aria-label="Cerrar aviso">✕</button></div>
 <header><div class="w"><a class="brand" href="#top" style="text-decoration:none">CANCIONES <i>PERSONALIZADAS</i></a>
-<nav><a href="#crear">Crear</a><a href="#ocasiones">Ocasiones</a><a href="#ejemplos">Ejemplos</a><a href="#redes">Redes</a><a href="#paquetes">Paquetes</a><a href="#faq">Preguntas</a><button class="sh" id="share" aria-label="Compartir esta página">⤴</button></nav></div></header>
+<div class="hd"><nav id="menu" aria-label="Navegación principal"><a href="#crear">Crear</a><a href="#ocasiones">Ocasiones</a><a href="#ejemplos">Ejemplos</a><a href="#paquetes">Paquetes</a><a href="#faq">Preguntas</a><a class="nav-redes" href="#redes">Nuestras redes</a></nav><button class="sh" id="share" type="button" aria-label="Compartir esta página">⤴</button><button class="burger" id="burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button></div></div></header>
 <main id="top">
 <section class="hero"><div class="w">
  <div>
   <h1>Tu historia.<br>Tu canción única.</h1>
   <p class="l">Transformamos tus recuerdos, sentimientos y momentos especiales en una canción creada exclusivamente para vos.</p>
   <p class="script">Hay regalos que se entregan. Y hay canciones que se quedan para siempre.</p>
-  <div class="cta"><a class="btn p" href="#crear">Crear mi canción</a><a class="btn o" href="#ejemplos">Escuchar ejemplos</a></div>
+  <div class="cta"><a class="btn p" href="#crear">Crear mi canción</a><a class="btn o" href="#ejemplos">Escuchar ejemplos de nuestras redes</a><a class="btn o wao" id="hero-wa" target="_blank" rel="noopener"><svg class="wi" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg> Prefiero escribir por WhatsApp</a></div>
+  <p class="hero-redes"><a href="#redes">Mirá nuestros trabajos en YouTube, TikTok e Instagram →</a></p>
  </div>
  <div class="phone" aria-hidden="true"><span class="note" style="left:-22px;top:18%">♪</span><span class="note" style="right:-20px;top:55%">♫</span>
   <div class="scr"><small>Tu canción</small><div class="wave" id="wave"></div><div class="script">para alguien especial</div><div class="play">▶</div></div></div>
 </div></section>
 
 <section id="crear"><div class="w"><div class="wz" id="wz">
+ <div class="resume" id="resume" hidden><span>Retomamos tu pedido donde lo dejaste. Se guarda solo en este dispositivo.</span><button type="button" id="reset">Empezar de nuevo</button></div>
  <div class="pg"><b id="bar"></b></div><div class="st" id="stn"></div><h3 id="q"></h3><p class="hn" id="hn"></p>
  <div id="body"></div><div class="er" id="err" aria-live="polite"></div>
  <div class="ac"><button class="btn bk" id="back" type="button">Anterior</button><button class="btn p" id="next" type="button">Siguiente</button></div>
- <p class="sm2">Al finalizar se abre WhatsApp con tu pedido listo para enviar.</p>
+ <p class="sm2">Al finalizar se abre WhatsApp con tu pedido listo para enviar.<br>¿Preferís no completar el formulario? <a class="lnk" id="crear-wa" target="_blank" rel="noopener">Escribinos directo por WhatsApp</a></p>
 </div></div></section>
 
 <section id="ocasiones"><div class="w"><h2>Una canción para cada momento</h2><p class="sub">Elegí la ocasión y empezá tu pedido. Si tu historia no está en la lista, también la hacemos.</p><div class="grid" id="occ"></div></div></section>
 
-<section id="ejemplos"><div class="w"><h2>Escuchá nuestras canciones</h2><p class="sub">Ejemplos reales de canciones creadas para historias únicas.</p><div class="grid" id="cat"></div></div></section>
+<section id="ejemplos"><div class="w"><h2>Escuchá ejemplos de nuestras redes</h2><p class="sub">Canciones reales creadas para historias únicas. Tocá tu red favorita y escuchalas.</p><div class="grid" id="cat"></div>
+ <div class="social-foot ej-links" aria-label="Escuchar ejemplos en nuestras redes"><a href="https://www.youtube.com/@Cancionpersonalizada" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>YouTube</a><a href="https://www.tiktok.com/@cancion_personalizada" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M14.4 3v10.7a3.8 3.8 0 1 1-3.8-3.8"/><path d="M14.4 3c.3 2.6 2 4.3 4.7 4.5"/></svg>TikTok</a><a href="https://www.instagram.com/cancion.personalizada" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5.2"/><circle cx="12" cy="12" r="4.1"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>Instagram</a></div></div></section>
 
-<section id="redes"><div class="w"><h2>Conocé nuestros trabajos</h2><p class="sub">Visitá nuestras redes, descubrí canciones personalizadas y mirá videos de trabajos que ya creamos.</p>
+<section id="video"><div class="w">
+ <div class="vt"><h2>Mirá cómo lo contamos</h2><p class="sub">En pocos segundos entendés cómo convertimos tu historia en una canción única.</p></div>
+ <div class="vf"><video controls preload="none" playsinline poster="img/poster-video.jpg" aria-label="Video: cómo creamos tu canción personalizada"><source src="video/trabajo.mp4" type="video/mp4">Tu navegador no puede reproducir este video.</video></div>
+ <div class="vc"><a class="btn p" href="#crear">Quiero mi canción</a></div>
+</div></section>
+
+<section id="paquetes"><div class="w"><h2>Elegí cómo regalarla</h2><p class="sub">El precio final y los detalles se confirman personalmente por WhatsApp antes de avanzar.</p><p class="entrega" id="entrega" hidden></p><div class="grid" id="pk"></div></div></section>
+
+<section id="redes"><div class="w">
+ <div class="head"><span class="kick">Nuestras redes</span><h2>Conocé nuestros trabajos</h2>
+ <p class="sub">Escuchá, descubrí y emocionate con las canciones personalizadas que creamos para historias reales y momentos inolvidables.</p></div>
  <div class="social-grid">
-  <a class="social-card" href="https://www.youtube.com/@Cancionpersonalizada" target="_blank" rel="noopener noreferrer" aria-label="Ver trabajos en YouTube">
-   <span class="social-icon" aria-hidden="true">▶</span><strong>YouTube</strong><span class="copy">Escuchá canciones y mirá nuestros videos.</span><span class="social-cta">Ver canal ↗</span>
-  </a>
-  <a class="social-card" href="https://www.tiktok.com/@cancion_personalizada" target="_blank" rel="noopener noreferrer" aria-label="Ver trabajos en TikTok">
-   <span class="social-icon" aria-hidden="true">♪</span><strong>TikTok</strong><span class="copy">Descubrí clips, ideas y momentos musicales.</span><span class="social-cta">Ver perfil ↗</span>
-  </a>
-  <a class="social-card" href="https://www.instagram.com/cancion.personalizada/" target="_blank" rel="noopener noreferrer" aria-label="Ver trabajos en Instagram">
-   <span class="social-icon" aria-hidden="true">◎</span><strong>Instagram</strong><span class="copy">Conocé nuestros trabajos, reels y novedades.</span><span class="social-cta">Ver perfil ↗</span>
-  </a>
- </div></div></section>
-
-<section id="paquetes"><div class="w"><h2>Elegí cómo regalarla</h2><p class="sub">El precio final y los detalles se confirman personalmente por WhatsApp antes de avanzar.</p><div class="grid" id="pk"></div></div></section>
+  <article class="social-card yt">
+   <div class="social-icon"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></div>
+   <span class="social-name">YouTube</span>
+   <h3>Escuchá nuestras canciones.</h3>
+   <p>Descubrí nuestras creaciones musicales y conocé diferentes estilos.</p>
+   <a class="btn p social-btn" href="https://www.youtube.com/@Cancionpersonalizada" target="_blank" rel="noopener noreferrer" aria-label="Ver canal de YouTube de Canciones Personalizadas (se abre en una pestaña nueva)">Ver canal <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+  </article>
+  <article class="social-card tt">
+   <div class="social-icon"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M14.4 3v10.7a3.8 3.8 0 1 1-3.8-3.8"/><path d="M14.4 3c.3 2.6 2 4.3 4.7 4.5"/></svg></div>
+   <span class="social-name">TikTok</span>
+   <h3>Mirá nuestras creaciones.</h3>
+   <p>Disfrutá videos, fragmentos y canciones personalizadas.</p>
+   <a class="btn p social-btn" href="https://www.tiktok.com/@cancion_personalizada" target="_blank" rel="noopener noreferrer" aria-label="Seguirnos en TikTok (se abre en una pestaña nueva)">Seguirnos <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+  </article>
+  <article class="social-card ig">
+   <div class="social-icon"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5.2"/><circle cx="12" cy="12" r="4.1"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg></div>
+   <span class="social-name">Instagram</span>
+   <h3>Inspirate con nuestras historias.</h3>
+   <p>Conocé nuestros trabajos, novedades y dedicatorias especiales.</p>
+   <a class="btn p social-btn" href="https://www.instagram.com/cancion.personalizada" target="_blank" rel="noopener noreferrer" aria-label="Visitar Instagram de Canciones Personalizadas (se abre en una pestaña nueva)">Visitar Instagram <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+  </article>
+ </div>
+</div></section>
 
 <section><div class="w"><h2>Cómo funciona</h2><div class="grid steps">
 <div class="card"><h3>Contanos tu historia</h3><p>Completás el formulario paso a paso: para quién es, qué vivieron y qué emoción querés transmitir.</p></div>
@@ -177,7 +274,7 @@ footer{text-align:center;padding:50px 18px calc(110px + env(safe-area-inset-bott
 
 <section id="faq"><div class="w" style="max-width:760px"><h2>Preguntas frecuentes</h2>
 <details><summary>¿Cuánto cuesta?</summary><p>La canción personalizada parte desde $10.000. La personalización especial y la canción con video se coordinan personalmente por WhatsApp.</p></details>
-<details><summary>¿Cuánto tarda?</summary><p>Los tiempos dependen del tipo de trabajo y de la fecha que necesites. Los confirmamos con vos antes de avanzar.</p></details>
+<details><summary>¿Cuánto tarda?</summary><p id="faq-tarda">Los tiempos dependen del tipo de trabajo y de la fecha que necesites. Los confirmamos con vos antes de avanzar.</p></details>
 <details><summary>¿Puedo pedir el estilo de un artista?</summary><p>Podés indicar un artista o canción como referencia de estilo. Es una guía: no prometemos imitaciones exactas.</p></details>
 <details><summary>¿Cómo envío las fotos para el video?</summary><p>Las coordinamos por WhatsApp una vez enviado tu pedido.</p></details>
 <details><summary>¿Puedo corregir mi pedido?</summary><p>Sí. Antes de enviarlo ves un resumen y podés editar cada respuesta.</p></details>
@@ -185,9 +282,9 @@ footer{text-align:center;padding:50px 18px calc(110px + env(safe-area-inset-bott
 </main>
 <footer><div class="script">Canciones que se quedan para siempre</div><p>CANCIONES PERSONALIZADAS · Hecho con emoción ♡</p>
  <div class="social-foot" aria-label="Nuestras redes sociales">
-  <a href="https://www.youtube.com/@Cancionpersonalizada" target="_blank" rel="noopener noreferrer">YouTube</a>
-  <a href="https://www.tiktok.com/@cancion_personalizada" target="_blank" rel="noopener noreferrer">TikTok</a>
-  <a href="https://www.instagram.com/cancion.personalizada/" target="_blank" rel="noopener noreferrer">Instagram</a>
+  <a href="https://www.youtube.com/@Cancionpersonalizada" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>YouTube</a>
+  <a href="https://www.tiktok.com/@cancion_personalizada" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M14.4 3v10.7a3.8 3.8 0 1 1-3.8-3.8"/><path d="M14.4 3c.3 2.6 2 4.3 4.7 4.5"/></svg>TikTok</a>
+  <a href="https://www.instagram.com/cancion.personalizada" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5.2"/><circle cx="12" cy="12" r="4.1"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>Instagram</a>
  </div>
 </footer>
 <a class="fw" id="fw" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp"><svg class="wi" viewBox="0 0 24 24" width="34" height="34" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
@@ -195,6 +292,14 @@ footer{text-align:center;padding:50px 18px calc(110px + env(safe-area-inset-bott
 <script>
 // Número de WhatsApp del proyecto (sin cambios): +54 9 11 3765-8829
 const WHATSAPP_NUMBER='5491137658829';
+// === AJUSTES RÁPIDOS (editá estas líneas) ===
+// Tiempo de entrega. Ej.: '3 a 5 días hábiles'. Vacío = no se muestra.
+const ENTREGA='';
+// Banner de temporada. activo:false lo apaga. fin: deja de mostrarse después de esa fecha.
+// limite: fecha tope opcional que se muestra en el texto (AAAA-MM-DD). Ej.: '2026-12-18'
+const BANNER={activo:true,texto:'🎄 Se acerca Navidad: regalá una canción única.',fin:'2026-12-25',limite:''};
+// Contador de visitas sin cookies (goatcounter.com). Poné tu código, ej.: 'cancionespersonalizadas'. Vacío = desactivado.
+const GOATCOUNTER='';
 // === CATÁLOGO: agregá tus audios acá. Ejemplo:
 // {titulo:'Nombre',ocasion:'Bodas y aniversarios',desc:'Breve descripción',audio:'audios/cancion1.mp3',portada:'img/portada1.jpg'}
 const CATALOGO=[];
@@ -222,12 +327,22 @@ const STEPS=[
  {t:'Revisá y enviá tu pedido',h:'Completá tus datos y controlá el resumen. Podés editar cualquier respuesta.',f:[T('fecha','¿Para cuándo la necesitás?',{ph:'Ej.: 15 de diciembre (opcional)'}),T('fotos','Fotografías para el video',{ph:'Ej.: tengo entre 10 y 15 fotos (opcional)',video:1}),T('contacto','Teléfono o email de contacto',{ph:'Opcional'})]}];
 const WAI='<svg class="wi" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>';
 const $=id=>document.getElementById(id);
+// Origen de la visita (?utm_source=instagram) -> se agrega al mensaje de WhatsApp
+const store={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}},del(k){try{localStorage.removeItem(k)}catch(e){}}};
+const ORIGEN=(()=>{try{const q=new URLSearchParams(location.search);const o=(q.get('utm_source')||q.get('ref')||'').toLowerCase().replace(/[^a-z0-9_-]/g,'').slice(0,30);if(o){store.set('cp_origen',o);return o}}catch(e){}return store.get('cp_origen')||''})();
+const waUrl=t=>`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(t)}`;
+const CONSULTA='¡Hola! Quiero consultar por una canción personalizada.'+(ORIGEN?` (Origen: ${ORIGEN})`:'');
 let step=0,data={};
 const prodIsVideo=()=>data.producto===PROD[2].n;
 const fieldsOf=s=>STEPS[s].f.filter(f=>!f.video||prodIsVideo());
 const val=f=>Array.isArray(data[f.k])?data[f.k].join(', '):String(data[f.k]||'').trim();
 
+const KEY='cp_pedido_v1',TTL=7*864e5;
+function save(){if(!Object.keys(data).length)return;store.set(KEY,JSON.stringify({t:Date.now(),step,data}))}
+function restore(){try{const r=JSON.parse(store.get(KEY)||'null');if(!r||!r.data||Date.now()-r.t>TTL||!Object.keys(r.data).length){store.del(KEY);return false}
+ data=r.data;step=Math.min(Math.max(+r.step||0,0),STEPS.length-1);return true}catch(e){store.del(KEY);return false}}
 function render(){
+ save();
  const S=STEPS[step],last=step===STEPS.length-1,b=$('body');
  $('stn').textContent=`Paso ${step+1} de ${STEPS.length}`;$('bar').style.width=((step+1)/STEPS.length*100)+'%';
  $('q').textContent=S.t;$('hn').textContent=S.h;$('err').textContent='';b.replaceChildren();b.style.animation='none';void b.offsetWidth;b.style.animation='';
@@ -241,12 +356,12 @@ function render(){
     const on=()=>f.multi?(data[f.k]||[]).includes(t):data[f.k]===t;x.setAttribute('aria-pressed',on());
     x.onclick=()=>{if(f.multi){const a=data[f.k]||[];data[f.k]=a.includes(t)?a.filter(v=>v!==t):[...a,t]}else data[f.k]=t;
      g.querySelectorAll('.o1').forEach(y=>y.setAttribute('aria-pressed',(f.multi?(data[f.k]||[]).includes(y.firstChild.textContent):data[f.k]===y.firstChild.textContent)));
-     $('err').textContent='';if(f.k==='producto'&&!f.multi)setTimeout(()=>{if(step===0)go(1)},260)};
+     save();$('err').textContent='';if(f.k==='producto'&&!f.multi)setTimeout(()=>{if(step===0)go(1)},260)};
     g.append(x)});w.append(g);
   }else{
    const i=document.createElement(f.type==='area'?'textarea':'input');i.className='in';i.id='f_'+f.k;if(f.type==='text')i.type='text';
    i.placeholder=f.ph||'';i.value=data[f.k]||'';i.maxLength=f.type==='area'?1800:200;if(f.min)i.style.minHeight='90px';
-   i.oninput=()=>{data[f.k]=i.value;i.classList.remove('bad')};l.htmlFor=i.id;w.append(i);
+   i.oninput=()=>{data[f.k]=i.value;i.classList.remove('bad');save()};l.htmlFor=i.id;w.append(i);
   }b.append(w)});
  if(last)summary(b);
  $('back').style.visibility=step?'visible':'hidden';
@@ -273,7 +388,9 @@ $('next').onclick=()=>{
  const p=PROD.find(x=>x.n===data.producto)||PROD[0];
  const L=['¡Hola! Quiero encargar una canción personalizada.','',`SERVICIO: ${p.n}`,`PRECIO DE REFERENCIA: ${p.p.replace('Precio a coordinar por WhatsApp','A coordinar por WhatsApp')}`,''];
  STEPS.forEach((S,si)=>fieldsOf(si).forEach(f=>{if(f.k!=='producto'){const v=val(f);if(v)L.push(`${f.l}: ${v}`)}}));
+ if(ORIGEN)L.push('',`Origen: ${ORIGEN}`);
  L.push('','Quedo a la espera para confirmar detalles, precio final y forma de entrega. ¡Gracias!');
+ try{window.goatcounter&&window.goatcounter.count&&window.goatcounter.count({path:'pedido-enviado',title:'Pedido enviado',event:true})}catch(e){}
  window.location.href=`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(L.join('\n'))}`;
 };
 $('back').onclick=()=>{if(step)go(step-1)};
@@ -288,7 +405,7 @@ PROD.forEach(p=>{const c=document.createElement('article');c.className='card'+(p
  c.querySelector('.ic').textContent=p.i;c.querySelector('h3').textContent=p.n;c.querySelector('p').textContent=p.d;c.querySelector('.price').textContent=p.p;
  c.querySelector('button').onclick=()=>pick('producto',p.n,1);$('pk').append(c)});
 // Catálogo
-if(!CATALOGO.length){$('cat').style.display='block';$('cat').innerHTML='<div class="empty"><span class="script">Muy pronto</span>Acá vas a poder escuchar ejemplos reales. Mientras tanto, contanos tu historia y la convertimos en tu canción.<div class="cta" style="justify-content:center"><a class="btn p" href="#crear">Crear mi canción</a></div></div>'}
+if(!CATALOGO.length){$('cat').style.display='block';$('cat').innerHTML='<div class="empty"><span class="script">Ejemplos en camino</span>Estamos subiendo ejemplos acá. Mientras tanto, tocá una red de abajo para escucharlos.</div>'}
 CATALOGO.forEach(s=>{const c=document.createElement('article');c.className='card';c.innerHTML='<div class="cov"></div><h3></h3><div class="price"></div><p></p><audio controls preload="none"></audio><button class="btn o" type="button">Quiero una similar</button>';
  const cv=c.querySelector('.cov');if(s.portada){const im=new Image();im.alt='';im.loading='lazy';im.src=s.portada;cv.append(im)}else cv.textContent='♫';
  c.querySelector('h3').textContent=s.titulo;c.querySelector('.price').textContent=s.ocasion||'';c.querySelector('p').textContent=s.desc||'';c.querySelector('audio').src=s.audio;
@@ -298,11 +415,39 @@ if(TESTIMONIOS.length){$('testi').hidden=false;TESTIMONIOS.forEach(t=>{const c=d
 // Onda del teléfono
 $('wave').innerHTML=Array.from({length:26},(_,i)=>`<span style="--h:${14+Math.abs(Math.sin(i*.7))*46}px;--d:${(i%7)*.12}s"></span>`).join('');
 // WhatsApp flotante
-$('fw').href=`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('¡Hola! Quiero consultar por una canción personalizada.')}`;
+['fw','hero-wa','crear-wa'].forEach(id=>{$(id).href=waUrl(CONSULTA)});
 // Compartir
 $('share').onclick=async()=>{const d={title:document.title,text:'Hay regalos que se entregan. Y hay canciones que se quedan para siempre.',url:location.href.split('#')[0]};
  try{if(navigator.share){await navigator.share(d);return}await navigator.clipboard.writeText(d.url);toast('Enlace copiado')}catch(e){if(e&&e.name!=='AbortError')toast(d.url)}};
 function toast(m){const t=document.createElement('div');t.className='toast';t.textContent=m;document.body.append(t);setTimeout(()=>t.remove(),2200)}
+// Menú móvil desplegable
+const hdr=document.querySelector('header'),burger=$('burger');
+function menu(o){hdr.classList.toggle('open',o);burger.setAttribute('aria-expanded',String(o));burger.setAttribute('aria-label',o?'Cerrar menú':'Abrir menú')}
+burger.addEventListener('click',()=>menu(!hdr.classList.contains('open')));
+document.querySelectorAll('#menu a,.brand').forEach(a=>a.addEventListener('click',()=>menu(false)));
+document.addEventListener('keydown',e=>{if(e.key==='Escape')menu(false)});
+document.addEventListener('click',e=>{if(!hdr.contains(e.target))menu(false)});
+window.addEventListener('resize',()=>{if(window.innerWidth>1000)menu(false)});
+// Animación suave de las tarjetas de redes
+(function(){const cs=document.querySelectorAll('.social-card');
+ if(!('IntersectionObserver' in window)){return}
+ document.documentElement.classList.add('rv');
+ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in-view');io.unobserve(e.target)}}),{threshold:.15});
+ cs.forEach(c=>io.observe(c));
+})();
+// Tiempo de entrega (solo si lo completás arriba)
+if(ENTREGA){$('entrega').textContent='⏱ Tiempo de entrega: '+ENTREGA;$('entrega').hidden=false;$('faq-tarda').textContent='Tiempo estimado de entrega: '+ENTREGA+'. Los detalles finales se confirman con vos por WhatsApp antes de avanzar.'}
+// Banner de temporada
+(function(){if(!BANNER.activo)return;const hoy=new Date();if(BANNER.fin&&hoy>new Date(BANNER.fin+'T23:59:59'))return;
+ let closed=false;try{closed=sessionStorage.getItem('cp_promo')==='1'}catch(e){}if(closed)return;
+ let t=BANNER.texto;if(BANNER.limite){const d=new Date(BANNER.limite+'T12:00:00');if(!isNaN(d))t+=' Pedidos hasta el '+d.toLocaleDateString('es-AR',{day:'numeric',month:'long'})+'.'}
+ $('promo-t').textContent=t+' Pedila ya →';$('promo').hidden=false;
+ $('promo-x').onclick=()=>{$('promo').hidden=true;try{sessionStorage.setItem('cp_promo','1')}catch(e){}}})();
+// Contador de visitas sin cookies (opcional)
+if(GOATCOUNTER){const g=document.createElement('script');g.async=true;g.src='https://gc.zgo.at/count.js';g.dataset.goatcounter=`https://${GOATCOUNTER}.goatcounter.com/count`;document.head.append(g)}
+// Retomar pedido guardado
+if(restore()){$('resume').hidden=false}
+$('reset').onclick=()=>{data={};step=0;store.del(KEY);$('resume').hidden=true;render();$('wz').scrollIntoView({behavior:'smooth',block:'start'})};
 render();
 </script>
 </body>
