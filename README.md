@@ -1,27 +1,29 @@
-# Canciones Personalizadas
+# Canciones Personalizadas — rediseño premium
 
-Sitio estático preparado para GitHub Pages.
+Sitio estático (HTML + CSS + JavaScript) compatible con **GitHub Pages**. No requiere backend ni dependencias de pago.
 
-## Publicación
-1. Reemplazá el `index.html` del repositorio por este archivo.
-2. Confirmá el cambio directamente en la rama `main`.
-3. GitHub Pages publicará la nueva versión en la misma dirección.
+## Archivos
+- `index.html`: página completa (hero, ocasiones, formulario de 10 pasos, catálogo, paquetes, FAQ, WhatsApp).
+- `.nojekyll`: evita el procesamiento de Jekyll.
+- `TEXTOS_PARA_REDES.md`: textos para redes (sin cambios).
 
-## Funciones incluidas
-- Portada y presentación premium.
-- Tarjetas visuales de ocasiones.
-- Tres modalidades de servicio.
-- Formulario por pasos con preguntas específicas para bodas y cumpleaños de 15.
-- Selector de emociones múltiples.
-- Sección de muestras con acceso al canal de YouTube.
-- Espacio para testimonios reales autorizados.
-- Resumen y envío del pedido a WhatsApp.
-- Compartir y copiar el enlace.
-- Configuración local de precios para previsualización.
+## Conservado del proyecto original
+- Número de WhatsApp (`WHATSAPP_NUMBER`, al inicio del script): `5491137658829`.
+- Precio "Desde $10.000"; los otros dos servicios siguen "a coordinar por WhatsApp".
+- Todos los campos del pedido original y el envío con mensaje prellenado.
 
-## Limitaciones importantes
-- La sección de testimonios está vacía intencionalmente: agregá solamente opiniones/reacciones reales con autorización.
-- La sección de canciones dirige al canal de YouTube; para reproductores individuales hay que agregar los enlaces o archivos de audio concretos.
-- La configuración de precios guarda cambios únicamente en el navegador del dispositivo que la usa. No actualiza los precios para otros visitantes.
-- GitHub Pages es hosting estático. Un panel administrativo real, privado y compartido requiere backend, autenticación y base de datos.
-- El formulario abre WhatsApp con el pedido redactado. El cliente debe tocar Enviar dentro de WhatsApp.
+## Cómo agregar tus audios
+En `index.html`, buscá `const CATALOGO=[]` y completá:
+```js
+const CATALOGO=[{titulo:'Nombre',ocasion:'Bodas y aniversarios',desc:'Breve descripción',audio:'audios/cancion1.mp3',portada:'img/portada1.jpg'}];
+```
+Subí las carpetas `audios/` e `img/` al repositorio. Testimonios reales: `const TESTIMONIOS=[{texto:'...',autor:'Nombre'}]`; mientras esté vacío, la sección no se muestra.
+
+## Publicar en GitHub Pages
+1. Subí todos los archivos a la raíz de tu repositorio (reemplazando los anteriores).
+2. En GitHub: **Settings → Pages**.
+3. En **Source**, elegí **Deploy from a branch**, rama `main` y carpeta `/ (root)`. Guardá.
+4. Esperá 1–2 minutos: el sitio queda en `https://TU-USUARIO.github.io/NOMBRE-DEL-REPO/`.
+
+## Prueba rápida
+Completá el formulario, revisá el resumen, marcá la casilla y tocá **Enviar mi pedido por WhatsApp**.
