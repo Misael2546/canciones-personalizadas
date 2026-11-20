@@ -103,6 +103,17 @@ summary{cursor:pointer;min-height:56px;display:flex;align-items:center;font:700 
 summary::after{content:"+";color:var(--g);font-size:24px}details[open] summary::after{content:"–"}
 details p{color:#ecdde6;font-size:17px;padding:0 0 18px}
 .quote{font-family:var(--serif);font-style:italic;font-size:19px}
+.social-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:26px}
+.social-card{display:flex;flex-direction:column;align-items:flex-start;gap:10px;min-height:190px;padding:24px;border-radius:22px;text-decoration:none;color:var(--t);background:linear-gradient(150deg,#3a1b40,#211323 72%,#171019);border:1px solid #D88AB066;box-shadow:0 16px 40px #0006;transition:transform .2s,border-color .2s,box-shadow .2s}
+.social-card:hover{transform:translateY(-4px);border-color:#E5C394aa;box-shadow:0 18px 44px #B8427944}
+.social-icon{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(135deg,#8a4a9c,#e0509a);color:#fff;font:800 25px var(--ui);box-shadow:0 8px 24px #B8427955}
+.social-card strong{font:800 20px var(--ui);color:#fff}
+.social-card span.copy{color:#ecdde6;font-size:15.5px;line-height:1.45;flex:1}
+.social-cta{font:800 13px var(--ui);letter-spacing:.08em;text-transform:uppercase;color:#F0DCC8}
+.social-foot{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 22px;margin:20px 0 4px}
+.social-foot a{color:#F0DCC8;text-decoration:none;font:700 14px var(--ui)}
+.social-foot a:hover{color:#F0A9C8;text-decoration:underline}
+@media(max-width:640px){.social-card{min-height:170px}.social-grid{grid-template-columns:1fr}}
 footer{text-align:center;padding:50px 18px calc(110px + env(safe-area-inset-bottom));border-top:1px solid #E5C39422;color:#e3d2de;font-size:15px}
 .wi{fill:currentColor;flex:none}
 .fw{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:30;width:62px;height:62px;border-radius:18px;background:linear-gradient(160deg,#6BE98C,#25D366 60%,#1DB954);color:#fff;display:grid;place-items:center;text-decoration:none;box-shadow:0 10px 28px #000a,0 0 24px #25D36655,inset 0 1px #ffffff66}
@@ -112,7 +123,7 @@ footer{text-align:center;padding:50px 18px calc(110px + env(safe-area-inset-bott
 </head>
 <body>
 <header><div class="w"><a class="brand" href="#top" style="text-decoration:none">CANCIONES <i>PERSONALIZADAS</i></a>
-<nav><a href="#crear">Crear</a><a href="#ocasiones">Ocasiones</a><a href="#ejemplos">Ejemplos</a><a href="#paquetes">Paquetes</a><a href="#faq">Preguntas</a><button class="sh" id="share" aria-label="Compartir esta página">⤴</button></nav></div></header>
+<nav><a href="#crear">Crear</a><a href="#ocasiones">Ocasiones</a><a href="#ejemplos">Ejemplos</a><a href="#redes">Redes</a><a href="#paquetes">Paquetes</a><a href="#faq">Preguntas</a><button class="sh" id="share" aria-label="Compartir esta página">⤴</button></nav></div></header>
 <main id="top">
 <section class="hero"><div class="w">
  <div>
@@ -135,6 +146,19 @@ footer{text-align:center;padding:50px 18px calc(110px + env(safe-area-inset-bott
 <section id="ocasiones"><div class="w"><h2>Una canción para cada momento</h2><p class="sub">Elegí la ocasión y empezá tu pedido. Si tu historia no está en la lista, también la hacemos.</p><div class="grid" id="occ"></div></div></section>
 
 <section id="ejemplos"><div class="w"><h2>Escuchá nuestras canciones</h2><p class="sub">Ejemplos reales de canciones creadas para historias únicas.</p><div class="grid" id="cat"></div></div></section>
+
+<section id="redes"><div class="w"><h2>Conocé nuestros trabajos</h2><p class="sub">Visitá nuestras redes, descubrí canciones personalizadas y mirá videos de trabajos que ya creamos.</p>
+ <div class="social-grid">
+  <a class="social-card" href="https://www.youtube.com/@Cancionpersonalizada" target="_blank" rel="noopener noreferrer" aria-label="Ver trabajos en YouTube">
+   <span class="social-icon" aria-hidden="true">▶</span><strong>YouTube</strong><span class="copy">Escuchá canciones y mirá nuestros videos.</span><span class="social-cta">Ver canal ↗</span>
+  </a>
+  <a class="social-card" href="https://www.tiktok.com/@cancion_personalizada" target="_blank" rel="noopener noreferrer" aria-label="Ver trabajos en TikTok">
+   <span class="social-icon" aria-hidden="true">♪</span><strong>TikTok</strong><span class="copy">Descubrí clips, ideas y momentos musicales.</span><span class="social-cta">Ver perfil ↗</span>
+  </a>
+  <a class="social-card" href="https://www.instagram.com/cancion.personalizada/" target="_blank" rel="noopener noreferrer" aria-label="Ver trabajos en Instagram">
+   <span class="social-icon" aria-hidden="true">◎</span><strong>Instagram</strong><span class="copy">Conocé nuestros trabajos, reels y novedades.</span><span class="social-cta">Ver perfil ↗</span>
+  </a>
+ </div></div></section>
 
 <section id="paquetes"><div class="w"><h2>Elegí cómo regalarla</h2><p class="sub">El precio final y los detalles se confirman personalmente por WhatsApp antes de avanzar.</p><div class="grid" id="pk"></div></div></section>
 
@@ -159,7 +183,13 @@ footer{text-align:center;padding:50px 18px calc(110px + env(safe-area-inset-bott
 <details><summary>¿Puedo corregir mi pedido?</summary><p>Sí. Antes de enviarlo ves un resumen y podés editar cada respuesta.</p></details>
 <div class="cta"><a class="btn p" href="#crear">Crear mi canción</a></div></div></section>
 </main>
-<footer><div class="script">Canciones que se quedan para siempre</div><p>CANCIONES PERSONALIZADAS · Hecho con emoción ♡</p></footer>
+<footer><div class="script">Canciones que se quedan para siempre</div><p>CANCIONES PERSONALIZADAS · Hecho con emoción ♡</p>
+ <div class="social-foot" aria-label="Nuestras redes sociales">
+  <a href="https://www.youtube.com/@Cancionpersonalizada" target="_blank" rel="noopener noreferrer">YouTube</a>
+  <a href="https://www.tiktok.com/@cancion_personalizada" target="_blank" rel="noopener noreferrer">TikTok</a>
+  <a href="https://www.instagram.com/cancion.personalizada/" target="_blank" rel="noopener noreferrer">Instagram</a>
+ </div>
+</footer>
 <a class="fw" id="fw" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp"><svg class="wi" viewBox="0 0 24 24" width="34" height="34" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
 
 <script>

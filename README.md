@@ -3,7 +3,7 @@
 Sitio estático (HTML + CSS + JavaScript) compatible con **GitHub Pages**. No requiere backend ni dependencias de pago.
 
 ## Archivos
-- `index.html`: página completa (hero, ocasiones, formulario de 10 pasos, catálogo, paquetes, FAQ, WhatsApp).
+- `index.html`: página completa (hero, ocasiones, formulario de 10 pasos, catálogo, sección de redes, paquetes, FAQ y WhatsApp).
 - `.nojekyll`: evita el procesamiento de Jekyll.
 - `TEXTOS_PARA_REDES.md`: textos para redes (sin cambios).
 
@@ -11,6 +11,12 @@ Sitio estático (HTML + CSS + JavaScript) compatible con **GitHub Pages**. No re
 - Número de WhatsApp (`WHATSAPP_NUMBER`, al inicio del script): `5491137658829`.
 - Precio "Desde $10.000"; los otros dos servicios siguen "a coordinar por WhatsApp".
 - Todos los campos del pedido original y el envío con mensaje prellenado.
+
+## Redes sociales
+La página incluye una sección **Conocé nuestros trabajos** y enlaces en el pie de página:
+- YouTube: https://www.youtube.com/@Cancionpersonalizada
+- TikTok: https://www.tiktok.com/@cancion_personalizada
+- Instagram: https://www.instagram.com/cancion.personalizada/
 
 ## Cómo agregar tus audios
 En `index.html`, buscá `const CATALOGO=[]` y completá:
