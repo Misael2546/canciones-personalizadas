@@ -3,66 +3,143 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#101014">
+  <meta name="theme-color" content="#fff8f6">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
   <meta name="description" content="Convertí tu historia, tus recuerdos y tus emociones en una canción personalizada. Comenzá tu pedido por WhatsApp.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Canciones Personalizadas | Tu historia merece su canción">
   <meta property="og:description" content="Creá una canción única para esa persona especial. Completá el formulario y enviá tu pedido por WhatsApp.">
   <title>Canciones Personalizadas | Creá tu canción</title>
   <style>
-    :root{--bg:#0d0d12;--panel:#19191f;--panel2:#222129;--gold:#d3ad68;--gold-light:#f0d9ad;--text:#faf8f3;--muted:#b9b3a8;--line:#40382d;--green:#25d366;--danger:#ffb4a9}
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;background:radial-gradient(ellipse at 50% -15%,#38291e 0,#17151a 38%,var(--bg) 76%);color:var(--text);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;min-height:100vh}
-    button,input,textarea,select{font:inherit}
-    button{cursor:pointer}
-    .shell{width:min(100%,560px);min-height:100vh;margin:auto;background:linear-gradient(180deg,rgba(20,19,23,.92),rgba(12,12,16,.98));display:flex;flex-direction:column;box-shadow:0 0 50px #0007}
-    header{padding:19px 20px 15px;text-align:center;border-bottom:1px solid #ffffff12;background:#111116eF;position:sticky;top:0;z-index:5;backdrop-filter:blur(14px)}
-    .music-mark{width:43px;height:43px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;margin:0 auto 8px;color:var(--gold-light);font:26px Georgia,serif;box-shadow:0 0 22px #d3ad6820}
-    .brand{font:22px/1.1 Georgia,serif;letter-spacing:1.5px}.brand span{color:var(--gold-light)}
-    .tagline{font-size:10px;letter-spacing:1.6px;text-transform:uppercase;color:var(--muted);margin-top:6px}
-    main{padding:20px 17px 30px;flex:1}
-    .hero{text-align:center;padding:23px 8px 20px}
-    .eyebrow,.step{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold-light);font-weight:700}
-    h1{font:normal clamp(34px,8vw,43px)/1.08 Georgia,serif;margin:13px 0 12px}
-    h1 em{color:var(--gold-light);font-weight:normal}
-    .lead{font-size:14px;line-height:1.65;color:#d1cbc0;max-width:390px;margin:0 auto}
-    .promise{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:18px}
-    .promise span{border:1px solid #6a5636;border-radius:30px;padding:7px 11px;color:var(--gold-light);font-size:11px;background:#211c17}
-    .panel{background:linear-gradient(145deg,#1d1c22,#17161b);border:1px solid #ffffff17;border-radius:20px;padding:18px;margin-top:14px;box-shadow:0 12px 35px #0002}
-    .panel h2{font:normal 25px/1.2 Georgia,serif;margin:9px 0 8px}
-    .hint{font-size:13px;line-height:1.55;color:var(--muted);margin:0 0 17px}
-    .products{display:grid;gap:10px}
-    .product{width:100%;text-align:left;color:var(--text);background:#111116;border:1px solid #4a4134;border-radius:14px;padding:15px;transition:.18s}
-    .product:hover,.product.selected{border-color:var(--gold);background:#292218;transform:translateY(-1px)}
-    .product strong{display:block;font-size:15px;margin-bottom:5px}
-    .product small{display:block;color:#c9c1b5;line-height:1.45;font-size:12px}
-    .product .price{display:block;color:var(--gold-light);font-size:12px;margin-top:8px}
-    .progress{height:5px;background:#3b3731;border-radius:20px;overflow:hidden;margin:0 0 17px}
-    .bar{height:100%;width:0;background:linear-gradient(90deg,#9e7942,var(--gold-light));transition:width .25s}
-    .question{font:normal 24px/1.2 Georgia,serif;margin:9px 0 8px}
-    .field{display:block;width:100%;border:1px solid #51483b;border-radius:12px;background:#101015;color:#fff;padding:14px 13px;outline:none;min-height:49px}
-    .field:focus{border-color:var(--gold);box-shadow:0 0 0 3px #d3ad6818}
-    textarea.field{min-height:125px;resize:vertical}
-    .field::placeholder{color:#77736d}
-    .choices{display:grid;grid-template-columns:1fr 1fr;gap:9px}
-    .choice{background:#111116;color:#eee;border:1px solid #4b443a;border-radius:11px;padding:12px 10px;text-align:left;font-size:13px;min-height:48px}
-    .choice.selected{border-color:var(--gold);background:#2a2319;color:var(--gold-light)}
-    .actions{display:flex;gap:9px;margin-top:18px}
-    .btn{border:0;border-radius:30px;padding:14px 17px;font-weight:750;font-size:14px;min-height:48px}
-    .primary{background:linear-gradient(110deg,#c49a52,#f0d9ad);color:#21180c;flex:1}
-    .secondary{background:transparent;border:1px solid #665943;color:#e8d9bb}
-    .whatsapp{background:var(--green);color:#062b15;display:flex;align-items:center;justify-content:center;gap:9px;width:100%;font-size:15px}
-    .note{text-align:center;color:#8f897f;font-size:11px;line-height:1.5;margin:14px 4px 0}
-    .summary{display:grid;gap:12px;margin:15px 0;color:#e8e2d8;font-size:13px;line-height:1.5}
-    .summary-item{border-bottom:1px solid #ffffff13;padding-bottom:10px;overflow-wrap:anywhere}
-    .summary-item b{display:block;color:var(--gold-light);font-size:11px;text-transform:uppercase;letter-spacing:.6px;margin-bottom:3px}
-    .checkline{display:flex;gap:9px;align-items:flex-start;color:#c9c2b7;font-size:12px;line-height:1.45;margin-top:14px}
-    .checkline input{accent-color:var(--gold);margin-top:2px}
-    .error{color:var(--danger);font-size:12px;margin-top:9px;min-height:18px}
-    footer{text-align:center;border-top:1px solid #ffffff13;padding:17px;color:#8e887e;font-size:10px;letter-spacing:.6px}
-    .hidden{display:none!important}
-    @media(max-width:390px){main{padding:15px 13px 25px}.panel{padding:15px}.choices{grid-template-columns:1fr}.brand{font-size:20px}}
+:root{
+  color-scheme:light;
+  --bg:#fff8f6;
+  --panel:#fffdfc;
+  --panel2:#fff1f3;
+  --rose:#d9799b;
+  --rose-deep:#a94f75;
+  --lavender:#b8a4df;
+  --lavender-deep:#705c99;
+  --peach:#f6c3a8;
+  --cream:#fff5e9;
+  --plum:#50364f;
+  --text:#382d3b;
+  --muted:#817581;
+  --line:#f0dfe5;
+  --green:#25d366;
+  --danger:#b4435b;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:
+    radial-gradient(ellipse at 8% 5%,#fbe0e9 0,transparent 31%),
+    radial-gradient(ellipse at 95% 22%,#e9e0fa 0,transparent 30%),
+    linear-gradient(180deg,#fff9f6 0%,#fff6f8 48%,#f8f3fc 100%);
+  color:var(--text);
+  font-family:"DM Sans",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-optical-sizing:auto;
+  min-height:100vh;
+}
+button,input,textarea,select{font:inherit}
+button{cursor:pointer}
+.shell{
+  width:min(100%,560px);min-height:100vh;margin:auto;
+  background:linear-gradient(180deg,rgba(255,255,255,.74),rgba(255,250,250,.91));
+  display:flex;flex-direction:column;box-shadow:0 0 55px #76546d12;
+  overflow:hidden;position:relative;
+}
+header{
+  padding:19px 20px 15px;text-align:center;
+  border-bottom:1px solid #eddde5;
+  background:rgba(255,251,250,.88);position:sticky;top:0;z-index:5;
+  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)
+}
+.music-mark{
+  width:45px;height:45px;border:1px solid #e8b4c8;border-radius:50%;
+  display:grid;place-items:center;margin:0 auto 8px;color:var(--rose-deep);
+  font:26px Georgia,serif;background:linear-gradient(145deg,#fff,#f9e8ef);
+  box-shadow:0 5px 18px #d9799b20
+}
+.brand{font:600 22px/1.12 "Playfair Display",Georgia,serif;letter-spacing:.55px;color:var(--plum)}
+.brand span{color:var(--rose-deep)}
+.tagline{font-size:10px;font-weight:600;letter-spacing:1.65px;text-transform:uppercase;color:#8b7888;margin-top:7px}
+main{padding:20px 17px 30px;flex:1}
+.hero{text-align:center;padding:24px 8px 22px}
+.eyebrow,.step{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--rose-deep);font-weight:800}
+h1{font:600 clamp(37px,8.4vw,47px)/1.08 "Playfair Display",Georgia,serif;letter-spacing:-.7px;margin:13px 0 12px;color:var(--plum)}
+h1 em{color:var(--lavender-deep);font-weight:normal}
+.lead{font-size:15px;line-height:1.75;font-weight:400;color:#756977;max-width:390px;margin:0 auto}
+.promise{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:18px}
+.promise span{
+  border:1px solid #efd4df;border-radius:30px;padding:8px 12px;
+  color:#85536d;font-size:11px;background:linear-gradient(135deg,#fff,#fff1f5);
+  box-shadow:0 3px 12px #bd78951a
+}
+.promise span:nth-child(2){background:linear-gradient(135deg,#fff,#f1ebfb);border-color:#e2d8f3;color:#6e5a91}
+.promise span:nth-child(3){background:linear-gradient(135deg,#fff,#fff1e8);border-color:#f3dfd1;color:#98664f}
+.panel{
+  background:linear-gradient(145deg,rgba(255,255,255,.98),rgba(255,249,250,.96));
+  border:1px solid #f0dfe7;border-radius:22px;padding:19px;margin-top:14px;
+  box-shadow:0 12px 34px #805b7510
+}
+.panel h2{font:600 27px/1.2 "Playfair Display",Georgia,serif;letter-spacing:-.25px;margin:9px 0 8px;color:var(--plum)}
+.hint{font-size:13px;line-height:1.58;color:var(--muted);margin:0 0 17px}
+.products{display:grid;gap:10px}
+.product{
+  width:100%;text-align:left;color:var(--text);
+  background:linear-gradient(135deg,#fff 0%,#fff9fb 100%);
+  border:1px solid #efdee6;border-radius:16px;padding:15px;
+  transition:transform .18s,border-color .18s,box-shadow .18s,background .18s;
+  box-shadow:0 4px 13px #78556c0a
+}
+.product:hover,.product.selected{
+  border-color:#d98eac;
+  background:linear-gradient(135deg,#fff2f6 0%,#f6f0ff 100%);
+  transform:translateY(-1px);box-shadow:0 8px 20px #c77b9b1c
+}
+.product strong{display:block;font-size:15px;font-weight:800;letter-spacing:-.15px;margin-bottom:5px;color:var(--plum)}
+.product small{display:block;color:#786d79;line-height:1.58;font-size:13px}
+.product .price{display:block;color:var(--rose-deep);font-size:12px;font-weight:700;margin-top:8px}
+.progress{height:6px;background:#f0e7f1;border-radius:20px;overflow:hidden;margin:0 0 17px}
+.bar{height:100%;width:0;background:linear-gradient(90deg,var(--rose),var(--lavender));transition:width .25s;border-radius:20px}
+.question{font:600 26px/1.2 "Playfair Display",Georgia,serif;letter-spacing:-.2px;margin:9px 0 8px;color:var(--plum)}
+.field{
+  display:block;width:100%;border:1px solid #eadbe4;border-radius:13px;
+  background:#fff;color:#443746;padding:14px 13px;outline:none;min-height:49px;
+  box-shadow:inset 0 1px 2px #78556c08
+}
+.field:focus{border-color:#cf8cab;box-shadow:0 0 0 3px #d9799b20}
+textarea.field{min-height:125px;resize:vertical}
+.field::placeholder{color:#a69aa6}
+.choices{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.choice{
+  background:#fff;color:#5c4c5e;border:1px solid #ebdfe9;border-radius:12px;
+  padding:12px 10px;text-align:left;font-size:13px;min-height:48px;
+  box-shadow:0 3px 10px #78556c08
+}
+.choice.selected{border-color:#d58eac;background:#fff0f5;color:#934d70}
+.actions{display:flex;gap:9px;margin-top:18px}
+.btn{border:0;border-radius:30px;padding:14px 17px;font-weight:800;font-size:14px;letter-spacing:.1px;min-height:48px;transition:transform .15s,filter .15s}
+.btn:active{transform:scale(.985)}
+.primary{background:linear-gradient(110deg,#d9799b 0%,#b99fdf 100%);color:#fff;flex:1;box-shadow:0 7px 17px #b77aa12e}
+.secondary{background:#fff;border:1px solid #e7d6e3;color:#725d76}
+.whatsapp{background:var(--green);color:#063018;display:flex;align-items:center;justify-content:center;gap:9px;width:100%;font-size:15px;box-shadow:0 7px 17px #25d36625}
+.note{text-align:center;color:#958996;font-size:11px;line-height:1.55;margin:14px 4px 0}
+.summary{display:grid;gap:12px;margin:15px 0;color:#5f5261;font-size:13px;line-height:1.5}
+.summary-item{border-bottom:1px solid #f0e4eb;padding-bottom:10px;overflow-wrap:anywhere}
+.summary-item b{display:block;color:var(--rose-deep);font-size:11px;text-transform:uppercase;letter-spacing:.6px;margin-bottom:3px}
+.checkline{display:flex;gap:9px;align-items:flex-start;color:#776a78;font-size:12px;line-height:1.45;margin-top:14px}
+.checkline input{accent-color:var(--rose-deep);margin-top:2px}
+.error{color:var(--danger);font-size:12px;margin-top:9px;min-height:18px}
+footer{text-align:center;border-top:1px solid #f0e1e8;padding:17px;color:#9a8d99;font-size:10px;letter-spacing:.6px;background:#fffafa}
+.hidden{display:none!important}
+button:focus-visible{outline:3px solid #b99fdf;outline-offset:3px}
+@media(max-width:390px){main{padding:15px 13px 25px}.panel{padding:15px}.choices{grid-template-columns:1fr}.brand{font-size:20px}.lead{font-size:14px}}
+
   </style>
 </head>
 <body>
@@ -150,7 +227,8 @@
     {key:'nombreCliente',q:'¿Cómo te llamás?',h:'Así sabemos con quién estamos coordinando el pedido.',type:'text',ph:'Tu nombre',required:true},
     {key:'destinatario',q:'¿Para quién querés crear esta canción?',h:'Elegí quién va a recibir este regalo.',type:'choice',opts:['Mi pareja','Mi mamá o mi papá','Mi hijo o hija','Un familiar','Un amigo o amiga','Otra persona'],required:true},
     {key:'nombre',q:'¿Cómo se llama esa persona?',h:'Podés escribir su nombre o el apodo que usás con cariño.',type:'text',ph:'Por ejemplo: Viviana',required:true},
-    {key:'ocasion',q:'¿Qué ocasión celebran?',h:'Cumpleaños, aniversario, boda, homenaje, agradecimiento o simplemente porque sí.',type:'text',ph:'Contanos qué queremos celebrar...',required:true},
+    {key:'ocasion',q:'¿Qué ocasión querés celebrar?',h:'Elegí el momento especial para el que vamos a crear esta canción.',type:'choice',opts:['Boda / casamiento','Cumpleaños de 15','Cumpleaños','Aniversario de pareja','Renovación de votos','Graduación','Nacimiento o bienvenida','Día de la madre o del padre','Homenaje o recuerdo','Pedida de mano','Otra ocasión / porque sí'],required:true},
+    {key:'detalleOcasion',q:'¿Querés contarnos algún detalle de la ocasión?',h:'Por ejemplo: fecha de la boda, nombre de los novios, temática de los 15, edad que cumple o cómo será el festejo. Es opcional.',type:'area',ph:'Contanos algún detalle que quieras incluir...',required:false},
     {key:'historia',q:'Contanos su historia',h:'Compartí recuerdos, momentos importantes, anécdotas, viajes, frases o detalles que hagan única a esa persona.',type:'area',ph:'Nuestra historia comenzó...',required:true},
     {key:'estilo',q:'¿Qué estilo musical preferís?',h:'Si no tenés uno definido, elegí «Sorprendeme».',type:'choice',opts:['Bachata','Pop','Balada','Cumbia','Folklore','Rock','Cuarteto','Sorprendeme','Otro estilo'],required:true},
     {key:'emocion',q:'¿Qué emoción querés transmitir?',h:'Elegí lo que te gustaría que sienta al escucharla.',type:'choice',opts:['Emoción y ternura','Alegría y celebración','Amor y romanticismo','Gratitud','Nostalgia y homenaje','Fuerza y superación','Sorpresa'],required:true},
@@ -260,7 +338,7 @@
     if(!$('consent').checked){ $('consentError').textContent = 'Marcá la casilla para confirmar que querés enviar el pedido.'; return; }
     const labels = {
       nombreCliente:'Nombre de quien realiza el pedido', destinatario:'Destinatario', nombre:'Nombre de la persona',
-      ocasion:'Ocasión', historia:'Historia y recuerdos', estilo:'Estilo musical', emocion:'Emoción buscada',
+      ocasion:'Ocasión', detalleOcasion:'Detalles de la ocasión', historia:'Historia y recuerdos', estilo:'Estilo musical', emocion:'Emoción buscada',
       dedicatoria:'Dedicatoria y preferencia de voz', fecha:'Fecha en que la necesita', fotos:'Fotografías para el video'
     };
     const lines = [

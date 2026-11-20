@@ -1,47 +1,24 @@
 # Canciones Personalizadas
 
-Sitio web estático para recibir pedidos de canciones personalizadas. El cliente elige el servicio, completa un formulario y al finalizar se abre WhatsApp con el pedido organizado para que lo revise y lo envíe.
+Sitio web estático para solicitar canciones personalizadas y enviar los datos del pedido por WhatsApp.
 
-## Archivos
+## Publicación en GitHub Pages
 
-- `index.html`: aplicación completa. No requiere servidor, base de datos ni instalación.
-- `TEXTOS_PARA_REDES.md`: textos sugeridos para colocar en perfiles y publicaciones.
-- `.nojekyll`: evita el procesamiento de Jekyll en GitHub Pages.
+1. Subí `index.html` a la raíz del repositorio.
+2. Confirmá los cambios en la rama `main`.
+3. En Settings → Pages, seleccioná `Deploy from a branch`, rama `main` y carpeta `/(root)`.
 
-## Publicar gratis con GitHub Pages
+## Funciones
 
-1. Descargá y descomprimí el ZIP.
-2. En GitHub, creá un repositorio nuevo. Por ejemplo: `canciones-personalizadas`.
-3. Entrá al repositorio y elegí **Add file → Upload files**.
-4. Subí `index.html`, `README.md`, `TEXTOS_PARA_REDES.md` y `.nojekyll` en la raíz del repositorio.
-5. Presioná **Commit changes**.
-6. Abrí **Settings → Pages**.
-7. En **Build and deployment**, elegí **Deploy from a branch**.
-8. Seleccioná la rama `main` y la carpeta `/ (root)`. Guardá.
-9. Esperá a que GitHub Pages publique el sitio. La dirección tendrá un formato parecido a `https://TU-USUARIO.github.io/canciones-personalizadas/`.
+- Selección de tipo de servicio: canción personalizada, personalización especial o canción con video y fotografías.
+- Formulario de pedido con destinatario, ocasión, historia, estilo musical, emoción y dedicatoria.
+- Ocasiones sugeridas: boda/casamiento, cumpleaños de 15, cumpleaños, aniversarios, renovación de votos, graduación, nacimiento, homenajes y otras.
+- Resumen previo y envío del pedido por WhatsApp.
 
-## WhatsApp configurado
+## Contacto
 
-El formulario está configurado con el número comercial que aparece en la información compartida: **11 3765-8829**, Argentina. El enlace utiliza el formato internacional `5491137658829`.
+El formulario prepara el mensaje para WhatsApp `+54 9 11 3765-8829`.
 
-Si el número cambia, buscá esta línea al final de `index.html` y reemplazala por el número correcto, solo con dígitos:
+## Tipografías
 
-```js
-const WHATSAPP_NUMBER = '5491137658829';
-```
-
-## Cómo funciona
-
-- Los tres tipos de servicio pasan por el mismo formulario.
-- Los campos principales son obligatorios; fecha y detalle de fotos son opcionales.
-- Para el servicio de video aparece una pregunta adicional sobre las fotografías.
-- Al confirmar, se prepara un mensaje con todas las respuestas y se abre WhatsApp.
-- El cliente todavía debe tocar **Enviar** dentro de WhatsApp. El sitio no envía mensajes por sí solo.
-
-## Importante sobre las redes sociales
-
-Instagram y TikTok normalmente no hacen clicables los enlaces escritos en el texto de una publicación. Usá la URL de GitHub Pages en el campo de enlace del perfil y, cuando esté disponible, en historias con sticker de enlace. En YouTube colocala en la descripción del video y en el comentario fijado. En Facebook podés agregarla en la publicación y en los botones/enlaces de la página.
-
-## Privacidad y alcance
-
-Esta versión no guarda los formularios en una base de datos ni recibe pagos. Los datos quedan en el dispositivo mientras se completa el formulario y se pasan a WhatsApp únicamente cuando el usuario toca el botón final. El precio que figura es el de referencia que ya estaba en el prototipo; confirmá que siga vigente antes de publicar.
+Se utiliza Playfair Display para títulos y DM Sans para textos y controles. Se cargan desde Google Fonts; si no hay conexión, se aplican tipografías de respaldo del dispositivo.
